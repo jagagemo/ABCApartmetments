@@ -14,3 +14,17 @@ C:\Users\JesusAlfonso\Development\Visual Studio Express 2013 for Windows Desktop
 C:\Users\JesusAlfonso\Development\Visual Studio Express 2013 for Windows Desktop\ABCApartments\ABC Apartments\bin\Debug\ABC Apartments.exe.config
 C:\Users\JesusAlfonso\Development\Visual Studio Express 2013 for Windows Desktop\ABCApartments\ABC Apartments\obj\Debug\ABC Apartments.exe
 C:\Users\JesusAlfonso\Development\Visual Studio Express 2013 for Windows Desktop\ABCApartments\ABC Apartments\obj\Debug\ABC Apartments.pdb
+D:\Development\Visual Studio Express 2013 for Windows Desktop\ABCApartmetments\ABC Apartments\bin\Debug\ABC Apartments.exe.config
+D:\Development\Visual Studio Express 2013 for Windows Desktop\ABCApartmetments\ABC Apartments\obj\Debug\ABC Apartments.exe
+D:\Development\Visual Studio Express 2013 for Windows Desktop\ABCApartmetments\ABC Apartments\obj\Debug\ABC Apartments.pdb
+D:\Development\Visual Studio Express 2013 for Windows Desktop\ABCApartmetments\ABC Apartments\bin\Debug\ABC Apartments.exe
+D:\Development\Visual Studio Express 2013 for Windows Desktop\ABCApartmetments\ABC Apartments\bin\Debug\ABC Apartments.pdb
+D:\Development\Visual Studio Express 2013 for Windows Desktop\ABCApartmetments\ABC Apartments\obj\Debug\ABC Apartments.csprojResolveAssemblyReference.cache
+D:\Development\Visual Studio Express 2013 for Windows Desktop\ABCApartmetments\ABC Apartments\obj\Debug\ABC_Apartments.F1118ERioGrandeAve.resources
+D:\Development\Visual Studio Express 2013 for Windows Desktop\ABCApartmetments\ABC Apartments\obj\Debug\ABC_Apartments.F811ArizonaAve.resources
+D:\Development\Visual Studio Express 2013 for Windows Desktop\ABCApartmetments\ABC Apartments\obj\Debug\ABC_Apartments.MainForm.resources
+D:\Development\Visual Studio Express 2013 for Windows Desktop\ABCApartmetments\ABC Apartments\obj\Debug\ABC_Apartments.Properties.Resources.resources
+D:\Development\Visual Studio Express 2013 for Windows Desktop\ABCApartmetments\ABC Apartments\obj\Debug\ABC Apartments.csproj.GenerateResource.Cache
+D:\Development\Visual Studio Express 2013 for Windows Desktop\ABCApartmetments\ABC Apartments\obj\Debug\ABC_Apartments.InformationForm.resources
+D:\Development\Visual Studio Express 2013 for Windows Desktop\ABCApartmetments\ABC Apartments\obj\Debug\ABC_Apartments.F1113NorthSaintVrainSt.resources
+D:\Development\Visual Studio Express 2013 for Windows Desktop\ABCApartmetments\ABC Apartments\obj\Debug\ABC_Apartments.F605ERioGrandeAve.resources

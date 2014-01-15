@@ -25,7 +25,7 @@ namespace ABC_Apartments
 
         private void B605ERioRrandeAve_Click(object sender, EventArgs e)
         {
-            F605ERioRrandeAve f605ERioRrandeAve = new F605ERioRrandeAve();
+            F605ERioGrandeAve f605ERioRrandeAve = new F605ERioGrandeAve();
             f605ERioRrandeAve.Show();
         }
 

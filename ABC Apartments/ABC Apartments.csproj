@@ -50,17 +50,23 @@
     <Compile Include="F1113NorthSaintVrainSt.Designer.cs">
       <DependentUpon>F1113NorthSaintVrainSt.cs</DependentUpon>
     </Compile>
+    <Compile Include="InformationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformationForm.Designer.cs">
+      <DependentUpon>InformationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="F1118ERioGrandeAve.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="F1118ERioGrandeAve.Designer.cs">
       <DependentUpon>F1118ERioGrandeAve.cs</DependentUpon>
     </Compile>
-    <Compile Include="F605ERioRrandeAve.cs">
+    <Compile Include="F605ERioGrandeAve.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F605ERioRrandeAve.Designer.cs">
-      <DependentUpon>F605ERioRrandeAve.cs</DependentUpon>
+    <Compile Include="F605ERioGrandeAve.Designer.cs">
+      <DependentUpon>F605ERioGrandeAve.cs</DependentUpon>
     </Compile>
     <Compile Include="F811ArizonaAve.cs">
       <SubType>Form</SubType>
@@ -79,11 +85,14 @@
     <EmbeddedResource Include="F1113NorthSaintVrainSt.resx">
       <DependentUpon>F1113NorthSaintVrainSt.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InformationForm.resx">
+      <DependentUpon>InformationForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="F1118ERioGrandeAve.resx">
       <DependentUpon>F1118ERioGrandeAve.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="F605ERioRrandeAve.resx">
-      <DependentUpon>F605ERioRrandeAve.cs</DependentUpon>
+    <EmbeddedResource Include="F605ERioGrandeAve.resx">
+      <DependentUpon>F605ERioGrandeAve.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F811ArizonaAve.resx">
       <DependentUpon>F811ArizonaAve.cs</DependentUpon>
@@ -115,34 +124,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="res\811 Arizona.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="res\1175 North Saint Vrain St.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\811 Arizona Ave.bmp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\C__Users_JesusAlfonso_Development_Visual Studio Express 2013 for Windows Desktop_ABC Apartments_ABC Apartments_res_811 Arizona Ave.png.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="res\811 Arizona Ave.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="res\1118 E Rio Grande Ave.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="res\1120 E Rio Grande Ave.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="res\605 E Rio Rrande Ave.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="res\1113 North Saint Vrain St.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="res\Door.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\605 E Rio Rrande Ave.png" />
