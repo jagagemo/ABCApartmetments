@@ -1,0 +1,36 @@
+<Apartment>
+	<Address><Address>
+	<Responsible>
+		<FirstName></FirstName>
+		<MiddleIn></MiddleIn>
+		<LastName></LastName>
+		<SSN></SSN>
+		<Phone></Phone>
+		<DOB></DOB>
+		<Occupation></Occupation>
+	</Responsible>
+	<Tenant>
+		<Name></Name>
+		<Phone></Phone>
+	</Tenant>
+	<Tenant>
+		<Name></Name>
+		<Phone></Phone>
+	</Tenant>
+	<Tenant>
+		<Name></Name>
+		<Phone></Phone>
+	</Tenant>
+	<Tenant>
+		<Name></Name>
+		<Phone></Phone>
+	</Tenant>
+	<Tenant>
+		<Name></Name>
+		<Phone></Phone>
+	</Tenant>
+	<Tenant>
+		<Name></Name>
+		<Phone></Phone>
+	</Tenant>
+</Apartment>

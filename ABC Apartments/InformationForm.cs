@@ -21,9 +21,14 @@ namespace ABC_Apartments{
             InitializeComponent();
             this.Text = title;
             PBApartmentImage.Image = image;
-            PBApartmentImage.SizeMode = PictureBoxSizeMode.Zoom;
 
+            testDataBaseAndPopulate();
             testDefaults();
+        }
+
+        private void testDataBaseAndPopulate(){
+            if (false){return;}
+
         }
 
         private void testDefaults(){
@@ -315,19 +320,24 @@ namespace ABC_Apartments{
                 TBTenantsPhoneNumber1.Text = TBPhoneNumber.Text;
         }
 
+        //Picture ID
         private void BPictureID_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Title = "Open Image";
-            ofd.Filter = "BMP Image|*.bmp|PNG|*.png";
+            ofd.Filter = "Images|*.bmp; *.png; *.jpg; *.gif";
 
             if (ofd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 PBPictureID.Image = Image.FromFile(ofd.FileName);
-                PBPictureID.SizeMode = PictureBoxSizeMode.Zoom;
                 BPictureID.Hide();   
             }
         }
-        
+
+        //Save
+        private void BSave_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

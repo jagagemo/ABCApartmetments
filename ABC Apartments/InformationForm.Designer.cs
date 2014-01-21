@@ -79,7 +79,7 @@
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.richTextBox4 = new System.Windows.Forms.RichTextBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.Calender = new System.Windows.Forms.MonthCalendar();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
@@ -654,12 +654,12 @@
             this.dateTimePicker2.Size = new System.Drawing.Size(260, 22);
             this.dateTimePicker2.TabIndex = 46;
             // 
-            // monthCalendar1
+            // Calender
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(977, 8);
-            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 49;
+            this.Calender.Location = new System.Drawing.Point(977, 8);
+            this.Calender.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
+            this.Calender.Name = "Calender";
+            this.Calender.TabIndex = 49;
             // 
             // groupBox3
             // 
@@ -979,6 +979,7 @@
             this.PBApartmentImage.Margin = new System.Windows.Forms.Padding(4);
             this.PBApartmentImage.Name = "PBApartmentImage";
             this.PBApartmentImage.Size = new System.Drawing.Size(300, 200);
+            this.PBApartmentImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PBApartmentImage.TabIndex = 53;
             this.PBApartmentImage.TabStop = false;
             // 
@@ -988,6 +989,7 @@
             this.PBPictureID.Margin = new System.Windows.Forms.Padding(4);
             this.PBPictureID.Name = "PBPictureID";
             this.PBPictureID.Size = new System.Drawing.Size(300, 200);
+            this.PBPictureID.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PBPictureID.TabIndex = 54;
             this.PBPictureID.TabStop = false;
             // 
@@ -999,6 +1001,7 @@
             this.BSave.TabIndex = 55;
             this.BSave.Text = "Guardar";
             this.BSave.UseVisualStyleBackColor = true;
+            this.BSave.Click += new System.EventHandler(this.BSave_Click);
             // 
             // BPictureID
             // 
@@ -1023,7 +1026,7 @@
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.monthCalendar1);
+            this.Controls.Add(this.Calender);
             this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -1088,7 +1091,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.MonthCalendar Calender;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.RichTextBox richTextBox2;

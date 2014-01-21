@@ -42,9 +42,10 @@
             this.B605ERioRrandeAve.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.B605ERioRrandeAve.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.B605ERioRrandeAve.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.B605ERioRrandeAve.Location = new System.Drawing.Point(498, 12);
+            this.B605ERioRrandeAve.Location = new System.Drawing.Point(664, 15);
+            this.B605ERioRrandeAve.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.B605ERioRrandeAve.Name = "B605ERioRrandeAve";
-            this.B605ERioRrandeAve.Size = new System.Drawing.Size(333, 232);
+            this.B605ERioRrandeAve.Size = new System.Drawing.Size(444, 286);
             this.B605ERioRrandeAve.TabIndex = 4;
             this.B605ERioRrandeAve.Text = "605 E Rio Rrande Ave";
             this.B605ERioRrandeAve.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -57,9 +58,10 @@
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button4.Location = new System.Drawing.Point(625, 250);
+            this.button4.Location = new System.Drawing.Point(833, 308);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(486, 237);
+            this.button4.Size = new System.Drawing.Size(648, 292);
             this.button4.TabIndex = 3;
             this.button4.Text = "1120 E Rio Grande Ave";
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -71,9 +73,10 @@
             this.B1118ERioGrandeAve.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.B1118ERioGrandeAve.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.B1118ERioGrandeAve.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.B1118ERioGrandeAve.Location = new System.Drawing.Point(837, 12);
+            this.B1118ERioGrandeAve.Location = new System.Drawing.Point(1116, 15);
+            this.B1118ERioGrandeAve.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.B1118ERioGrandeAve.Name = "B1118ERioGrandeAve";
-            this.B1118ERioGrandeAve.Size = new System.Drawing.Size(341, 232);
+            this.B1118ERioGrandeAve.Size = new System.Drawing.Size(455, 286);
             this.B1118ERioGrandeAve.TabIndex = 2;
             this.B1118ERioGrandeAve.Text = "1118 E Rio Grande Ave";
             this.B1118ERioGrandeAve.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -86,9 +89,10 @@
             this.B1113NorthSaintVrainSt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.B1113NorthSaintVrainSt.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.B1113NorthSaintVrainSt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.B1113NorthSaintVrainSt.Location = new System.Drawing.Point(12, 12);
+            this.B1113NorthSaintVrainSt.Location = new System.Drawing.Point(16, 15);
+            this.B1113NorthSaintVrainSt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.B1113NorthSaintVrainSt.Name = "B1113NorthSaintVrainSt";
-            this.B1113NorthSaintVrainSt.Size = new System.Drawing.Size(480, 232);
+            this.B1113NorthSaintVrainSt.Size = new System.Drawing.Size(640, 286);
             this.B1113NorthSaintVrainSt.TabIndex = 1;
             this.B1113NorthSaintVrainSt.Text = "1113 North Saint Vrain St";
             this.B1113NorthSaintVrainSt.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -101,9 +105,10 @@
             this.B811ArizonaAve.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.B811ArizonaAve.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.B811ArizonaAve.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.B811ArizonaAve.Location = new System.Drawing.Point(39, 250);
+            this.B811ArizonaAve.Location = new System.Drawing.Point(52, 308);
+            this.B811ArizonaAve.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.B811ArizonaAve.Name = "B811ArizonaAve";
-            this.B811ArizonaAve.Size = new System.Drawing.Size(527, 232);
+            this.B811ArizonaAve.Size = new System.Drawing.Size(703, 286);
             this.B811ArizonaAve.TabIndex = 0;
             this.B811ArizonaAve.Text = "811 Arizona Ave";
             this.B811ArizonaAve.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -112,14 +117,15 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1190, 499);
+            this.ClientSize = new System.Drawing.Size(1587, 614);
             this.Controls.Add(this.B605ERioRrandeAve);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.B1118ERioGrandeAve);
             this.Controls.Add(this.B1113NorthSaintVrainSt);
             this.Controls.Add(this.B811ArizonaAve);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainForm";
