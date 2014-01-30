@@ -37,8 +37,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.TBDepositAmount = new System.Windows.Forms.TextBox();
+            this.TBRentAmount = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.CBGas = new System.Windows.Forms.CheckBox();
@@ -49,14 +49,14 @@
             this.CBWatter = new System.Windows.Forms.CheckBox();
             this.TBTrash = new System.Windows.Forms.TextBox();
             this.CBTrash = new System.Windows.Forms.CheckBox();
-            this.TBTenants1 = new System.Windows.Forms.TextBox();
+            this.TBTenantsName1 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.TBTenants2 = new System.Windows.Forms.TextBox();
+            this.TBTenantsName2 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.TBTenants4 = new System.Windows.Forms.TextBox();
+            this.TBTenantsName4 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.TBTenants3 = new System.Windows.Forms.TextBox();
+            this.TBTenantsName3 = new System.Windows.Forms.TextBox();
             this.TBMiddleInitial = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label25 = new System.Windows.Forms.Label();
@@ -72,41 +72,41 @@
             this.label21 = new System.Windows.Forms.Label();
             this.TBTenantsPhoneNumber1 = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.TBTenants6 = new System.Windows.Forms.TextBox();
-            this.TBTenants5 = new System.Windows.Forms.TextBox();
+            this.TBTenantsName6 = new System.Windows.Forms.TextBox();
+            this.TBTenantsName5 = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.RTBUtilitiesNotes = new System.Windows.Forms.RichTextBox();
+            this.DTPStartingDay = new System.Windows.Forms.DateTimePicker();
             this.Calender = new System.Windows.Forms.MonthCalendar();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.RTBTenantsNotes = new System.Windows.Forms.RichTextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.DTPEndingDay = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.DTPDOB = new System.Windows.Forms.DateTimePicker();
             this.label15 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.TBOcupation = new System.Windows.Forms.TextBox();
             this.TBLastName = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.TBPhoneNumber = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CBRentPaymentType = new System.Windows.Forms.ComboBox();
+            this.CBDepositPaymentType = new System.Windows.Forms.ComboBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.RTBPaymentNotes = new System.Windows.Forms.RichTextBox();
+            this.DTPRentPaymentDate = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.TBRentPaymentDay = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.RTBAdditionalNotes = new System.Windows.Forms.RichTextBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.richTextBox5 = new System.Windows.Forms.RichTextBox();
+            this.RTBOtherMonthlyExpencess = new System.Windows.Forms.RichTextBox();
             this.PBApartmentImage = new System.Windows.Forms.PictureBox();
             this.PBPictureID = new System.Windows.Forms.PictureBox();
             this.BSave = new System.Windows.Forms.Button();
@@ -210,21 +210,21 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Deposito:";
             // 
-            // textBox5
+            // TBDepositAmount
             // 
-            this.textBox5.Location = new System.Drawing.Point(120, 20);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(103, 22);
-            this.textBox5.TabIndex = 9;
+            this.TBDepositAmount.Location = new System.Drawing.Point(120, 20);
+            this.TBDepositAmount.Margin = new System.Windows.Forms.Padding(4);
+            this.TBDepositAmount.Name = "TBDepositAmount";
+            this.TBDepositAmount.Size = new System.Drawing.Size(103, 22);
+            this.TBDepositAmount.TabIndex = 9;
             // 
-            // textBox6
+            // TBRentAmount
             // 
-            this.textBox6.Location = new System.Drawing.Point(120, 52);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(103, 22);
-            this.textBox6.TabIndex = 10;
+            this.TBRentAmount.Location = new System.Drawing.Point(120, 52);
+            this.TBRentAmount.Margin = new System.Windows.Forms.Padding(4);
+            this.TBRentAmount.Name = "TBRentAmount";
+            this.TBRentAmount.Size = new System.Drawing.Size(103, 22);
+            this.TBRentAmount.TabIndex = 10;
             // 
             // label8
             // 
@@ -330,14 +330,14 @@
             this.CBTrash.UseVisualStyleBackColor = true;
             this.CBTrash.CheckedChanged += new System.EventHandler(this.CBTrash_CheckedChanged);
             // 
-            // TBTenants1
+            // TBTenantsName1
             // 
-            this.TBTenants1.Enabled = false;
-            this.TBTenants1.Location = new System.Drawing.Point(32, 25);
-            this.TBTenants1.Margin = new System.Windows.Forms.Padding(4);
-            this.TBTenants1.Name = "TBTenants1";
-            this.TBTenants1.Size = new System.Drawing.Size(320, 22);
-            this.TBTenants1.TabIndex = 33;
+            this.TBTenantsName1.Enabled = false;
+            this.TBTenantsName1.Location = new System.Drawing.Point(32, 25);
+            this.TBTenantsName1.Margin = new System.Windows.Forms.Padding(4);
+            this.TBTenantsName1.Name = "TBTenantsName1";
+            this.TBTenantsName1.Size = new System.Drawing.Size(320, 22);
+            this.TBTenantsName1.TabIndex = 33;
             // 
             // label11
             // 
@@ -359,15 +359,15 @@
             this.label12.TabIndex = 36;
             this.label12.Text = "2:";
             // 
-            // TBTenants2
+            // TBTenantsName2
             // 
-            this.TBTenants2.Location = new System.Drawing.Point(32, 57);
-            this.TBTenants2.Margin = new System.Windows.Forms.Padding(4);
-            this.TBTenants2.Name = "TBTenants2";
-            this.TBTenants2.Size = new System.Drawing.Size(320, 22);
-            this.TBTenants2.TabIndex = 35;
-            this.TBTenants2.Enter += new System.EventHandler(this.TBTenants2_Enter);
-            this.TBTenants2.Leave += new System.EventHandler(this.TBTenants2_Leave);
+            this.TBTenantsName2.Location = new System.Drawing.Point(32, 57);
+            this.TBTenantsName2.Margin = new System.Windows.Forms.Padding(4);
+            this.TBTenantsName2.Name = "TBTenantsName2";
+            this.TBTenantsName2.Size = new System.Drawing.Size(320, 22);
+            this.TBTenantsName2.TabIndex = 35;
+            this.TBTenantsName2.Enter += new System.EventHandler(this.TBTenants2_Enter);
+            this.TBTenantsName2.Leave += new System.EventHandler(this.TBTenants2_Leave);
             // 
             // label13
             // 
@@ -379,15 +379,15 @@
             this.label13.TabIndex = 40;
             this.label13.Text = "4:";
             // 
-            // TBTenants4
+            // TBTenantsName4
             // 
-            this.TBTenants4.Location = new System.Drawing.Point(32, 121);
-            this.TBTenants4.Margin = new System.Windows.Forms.Padding(4);
-            this.TBTenants4.Name = "TBTenants4";
-            this.TBTenants4.Size = new System.Drawing.Size(320, 22);
-            this.TBTenants4.TabIndex = 39;
-            this.TBTenants4.Enter += new System.EventHandler(this.TBTenants4_Enter);
-            this.TBTenants4.Leave += new System.EventHandler(this.TBTenants4_Leave);
+            this.TBTenantsName4.Location = new System.Drawing.Point(32, 121);
+            this.TBTenantsName4.Margin = new System.Windows.Forms.Padding(4);
+            this.TBTenantsName4.Name = "TBTenantsName4";
+            this.TBTenantsName4.Size = new System.Drawing.Size(320, 22);
+            this.TBTenantsName4.TabIndex = 39;
+            this.TBTenantsName4.Enter += new System.EventHandler(this.TBTenants4_Enter);
+            this.TBTenantsName4.Leave += new System.EventHandler(this.TBTenants4_Leave);
             // 
             // label14
             // 
@@ -399,15 +399,15 @@
             this.label14.TabIndex = 38;
             this.label14.Text = "3:";
             // 
-            // TBTenants3
+            // TBTenantsName3
             // 
-            this.TBTenants3.Location = new System.Drawing.Point(32, 89);
-            this.TBTenants3.Margin = new System.Windows.Forms.Padding(4);
-            this.TBTenants3.Name = "TBTenants3";
-            this.TBTenants3.Size = new System.Drawing.Size(320, 22);
-            this.TBTenants3.TabIndex = 37;
-            this.TBTenants3.Enter += new System.EventHandler(this.TBTenants3_Enter);
-            this.TBTenants3.Leave += new System.EventHandler(this.TBTenants3_Leave);
+            this.TBTenantsName3.Location = new System.Drawing.Point(32, 89);
+            this.TBTenantsName3.Margin = new System.Windows.Forms.Padding(4);
+            this.TBTenantsName3.Name = "TBTenantsName3";
+            this.TBTenantsName3.Size = new System.Drawing.Size(320, 22);
+            this.TBTenantsName3.TabIndex = 37;
+            this.TBTenantsName3.Enter += new System.EventHandler(this.TBTenants3_Enter);
+            this.TBTenantsName3.Leave += new System.EventHandler(this.TBTenants3_Leave);
             // 
             // TBMiddleInitial
             // 
@@ -435,16 +435,16 @@
             this.groupBox1.Controls.Add(this.label21);
             this.groupBox1.Controls.Add(this.TBTenantsPhoneNumber1);
             this.groupBox1.Controls.Add(this.label19);
-            this.groupBox1.Controls.Add(this.TBTenants6);
-            this.groupBox1.Controls.Add(this.TBTenants5);
+            this.groupBox1.Controls.Add(this.TBTenantsName6);
+            this.groupBox1.Controls.Add(this.TBTenantsName5);
             this.groupBox1.Controls.Add(this.label20);
-            this.groupBox1.Controls.Add(this.TBTenants1);
+            this.groupBox1.Controls.Add(this.TBTenantsName1);
             this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.TBTenants2);
+            this.groupBox1.Controls.Add(this.TBTenantsName2);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.TBTenants4);
-            this.groupBox1.Controls.Add(this.TBTenants3);
+            this.groupBox1.Controls.Add(this.TBTenantsName4);
+            this.groupBox1.Controls.Add(this.TBTenantsName3);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Location = new System.Drawing.Point(8, 135);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
@@ -574,25 +574,25 @@
             this.label19.TabIndex = 44;
             this.label19.Text = "6:";
             // 
-            // TBTenants6
+            // TBTenantsName6
             // 
-            this.TBTenants6.Location = new System.Drawing.Point(32, 185);
-            this.TBTenants6.Margin = new System.Windows.Forms.Padding(4);
-            this.TBTenants6.Name = "TBTenants6";
-            this.TBTenants6.Size = new System.Drawing.Size(320, 22);
-            this.TBTenants6.TabIndex = 43;
-            this.TBTenants6.Enter += new System.EventHandler(this.TBTenants6_Enter);
-            this.TBTenants6.Leave += new System.EventHandler(this.TBTenants6_Leave);
+            this.TBTenantsName6.Location = new System.Drawing.Point(32, 185);
+            this.TBTenantsName6.Margin = new System.Windows.Forms.Padding(4);
+            this.TBTenantsName6.Name = "TBTenantsName6";
+            this.TBTenantsName6.Size = new System.Drawing.Size(320, 22);
+            this.TBTenantsName6.TabIndex = 43;
+            this.TBTenantsName6.Enter += new System.EventHandler(this.TBTenants6_Enter);
+            this.TBTenantsName6.Leave += new System.EventHandler(this.TBTenants6_Leave);
             // 
-            // TBTenants5
+            // TBTenantsName5
             // 
-            this.TBTenants5.Location = new System.Drawing.Point(32, 153);
-            this.TBTenants5.Margin = new System.Windows.Forms.Padding(4);
-            this.TBTenants5.Name = "TBTenants5";
-            this.TBTenants5.Size = new System.Drawing.Size(320, 22);
-            this.TBTenants5.TabIndex = 41;
-            this.TBTenants5.Enter += new System.EventHandler(this.TBTenants5_Enter);
-            this.TBTenants5.Leave += new System.EventHandler(this.TBTenants5_Leave);
+            this.TBTenantsName5.Location = new System.Drawing.Point(32, 153);
+            this.TBTenantsName5.Margin = new System.Windows.Forms.Padding(4);
+            this.TBTenantsName5.Name = "TBTenantsName5";
+            this.TBTenantsName5.Size = new System.Drawing.Size(320, 22);
+            this.TBTenantsName5.TabIndex = 41;
+            this.TBTenantsName5.Enter += new System.EventHandler(this.TBTenants5_Enter);
+            this.TBTenantsName5.Leave += new System.EventHandler(this.TBTenants5_Leave);
             // 
             // label20
             // 
@@ -626,7 +626,7 @@
             // 
             // groupBox10
             // 
-            this.groupBox10.Controls.Add(this.richTextBox4);
+            this.groupBox10.Controls.Add(this.RTBUtilitiesNotes);
             this.groupBox10.Location = new System.Drawing.Point(8, 146);
             this.groupBox10.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox10.Name = "groupBox10";
@@ -636,23 +636,23 @@
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Notas de Utilidades:";
             // 
-            // richTextBox4
+            // RTBUtilitiesNotes
             // 
-            this.richTextBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox4.Location = new System.Drawing.Point(4, 19);
-            this.richTextBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(240, 100);
-            this.richTextBox4.TabIndex = 0;
-            this.richTextBox4.Text = "";
+            this.RTBUtilitiesNotes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RTBUtilitiesNotes.Location = new System.Drawing.Point(4, 19);
+            this.RTBUtilitiesNotes.Margin = new System.Windows.Forms.Padding(4);
+            this.RTBUtilitiesNotes.Name = "RTBUtilitiesNotes";
+            this.RTBUtilitiesNotes.Size = new System.Drawing.Size(240, 100);
+            this.RTBUtilitiesNotes.TabIndex = 0;
+            this.RTBUtilitiesNotes.Text = "";
             // 
-            // dateTimePicker2
+            // DTPStartingDay
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(39, 18);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(260, 22);
-            this.dateTimePicker2.TabIndex = 46;
+            this.DTPStartingDay.Location = new System.Drawing.Point(39, 18);
+            this.DTPStartingDay.Margin = new System.Windows.Forms.Padding(4);
+            this.DTPStartingDay.Name = "DTPStartingDay";
+            this.DTPStartingDay.Size = new System.Drawing.Size(260, 22);
+            this.DTPStartingDay.TabIndex = 46;
             // 
             // Calender
             // 
@@ -678,7 +678,7 @@
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.richTextBox2);
+            this.groupBox8.Controls.Add(this.RTBTenantsNotes);
             this.groupBox8.Location = new System.Drawing.Point(8, 420);
             this.groupBox8.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox8.Name = "groupBox8";
@@ -688,22 +688,22 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Notas de Habitantes :";
             // 
-            // richTextBox2
+            // RTBTenantsNotes
             // 
-            this.richTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox2.Location = new System.Drawing.Point(4, 19);
-            this.richTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(611, 58);
-            this.richTextBox2.TabIndex = 0;
-            this.richTextBox2.Text = "";
+            this.RTBTenantsNotes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RTBTenantsNotes.Location = new System.Drawing.Point(4, 19);
+            this.RTBTenantsNotes.Margin = new System.Windows.Forms.Padding(4);
+            this.RTBTenantsNotes.Name = "RTBTenantsNotes";
+            this.RTBTenantsNotes.Size = new System.Drawing.Size(611, 58);
+            this.RTBTenantsNotes.TabIndex = 0;
+            this.RTBTenantsNotes.Text = "";
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.dateTimePicker1);
+            this.groupBox5.Controls.Add(this.DTPEndingDay);
             this.groupBox5.Controls.Add(this.label9);
             this.groupBox5.Controls.Add(this.label10);
-            this.groupBox5.Controls.Add(this.dateTimePicker2);
+            this.groupBox5.Controls.Add(this.DTPStartingDay);
             this.groupBox5.Location = new System.Drawing.Point(8, 361);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox5.Name = "groupBox5";
@@ -713,13 +713,13 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Estancia:";
             // 
-            // dateTimePicker1
+            // DTPEndingDay
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(339, 18);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(260, 22);
-            this.dateTimePicker1.TabIndex = 47;
+            this.DTPEndingDay.Location = new System.Drawing.Point(339, 18);
+            this.DTPEndingDay.Margin = new System.Windows.Forms.Padding(4);
+            this.DTPEndingDay.Name = "DTPEndingDay";
+            this.DTPEndingDay.Size = new System.Drawing.Size(260, 22);
+            this.DTPEndingDay.TabIndex = 47;
             // 
             // label9
             // 
@@ -733,10 +733,10 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.dateTimePicker4);
+            this.groupBox4.Controls.Add(this.DTPDOB);
             this.groupBox4.Controls.Add(this.label15);
             this.groupBox4.Controls.Add(this.label18);
-            this.groupBox4.Controls.Add(this.textBox18);
+            this.groupBox4.Controls.Add(this.TBOcupation);
             this.groupBox4.Controls.Add(this.TBLastName);
             this.groupBox4.Controls.Add(this.label17);
             this.groupBox4.Controls.Add(this.TBPhoneNumber);
@@ -758,14 +758,14 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Persona Responsable:";
             // 
-            // dateTimePicker4
+            // DTPDOB
             // 
-            this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker4.Location = new System.Drawing.Point(464, 48);
-            this.dateTimePicker4.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(132, 22);
-            this.dateTimePicker4.TabIndex = 50;
+            this.DTPDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DTPDOB.Location = new System.Drawing.Point(464, 48);
+            this.DTPDOB.Margin = new System.Windows.Forms.Padding(4);
+            this.DTPDOB.Name = "DTPDOB";
+            this.DTPDOB.Size = new System.Drawing.Size(132, 22);
+            this.DTPDOB.TabIndex = 50;
             // 
             // label15
             // 
@@ -787,13 +787,13 @@
             this.label18.TabIndex = 46;
             this.label18.Text = "Ocupacion:";
             // 
-            // textBox18
+            // TBOcupation
             // 
-            this.textBox18.Location = new System.Drawing.Point(101, 80);
-            this.textBox18.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(251, 22);
-            this.textBox18.TabIndex = 47;
+            this.TBOcupation.Location = new System.Drawing.Point(101, 80);
+            this.TBOcupation.Margin = new System.Windows.Forms.Padding(4);
+            this.TBOcupation.Name = "TBOcupation";
+            this.TBOcupation.Size = new System.Drawing.Size(251, 22);
+            this.TBOcupation.TabIndex = 47;
             // 
             // TBLastName
             // 
@@ -826,16 +826,16 @@
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.comboBox2);
-            this.groupBox6.Controls.Add(this.comboBox1);
+            this.groupBox6.Controls.Add(this.CBRentPaymentType);
+            this.groupBox6.Controls.Add(this.CBDepositPaymentType);
             this.groupBox6.Controls.Add(this.groupBox9);
-            this.groupBox6.Controls.Add(this.dateTimePicker3);
+            this.groupBox6.Controls.Add(this.DTPRentPaymentDate);
             this.groupBox6.Controls.Add(this.label6);
-            this.groupBox6.Controls.Add(this.textBox9);
+            this.groupBox6.Controls.Add(this.TBRentPaymentDay);
             this.groupBox6.Controls.Add(this.label7);
             this.groupBox6.Controls.Add(this.label5);
-            this.groupBox6.Controls.Add(this.textBox5);
-            this.groupBox6.Controls.Add(this.textBox6);
+            this.groupBox6.Controls.Add(this.TBDepositAmount);
+            this.groupBox6.Controls.Add(this.TBRentAmount);
             this.groupBox6.Controls.Add(this.label8);
             this.groupBox6.Location = new System.Drawing.Point(327, 516);
             this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
@@ -846,32 +846,35 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Cobros:";
             // 
-            // comboBox2
+            // CBRentPaymentType
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(232, 52);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(137, 24);
-            this.comboBox2.TabIndex = 56;
-            this.comboBox2.Text = "Forma de Pago";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.CBRentPaymentType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBRentPaymentType.FormattingEnabled = true;
+            this.CBRentPaymentType.Items.AddRange(new object[] {
             "Effectivo",
             "Money Order"});
-            this.comboBox1.Location = new System.Drawing.Point(232, 20);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(137, 24);
-            this.comboBox1.TabIndex = 54;
-            this.comboBox1.Text = "Forma de Pago";
+            this.CBRentPaymentType.Location = new System.Drawing.Point(232, 52);
+            this.CBRentPaymentType.Margin = new System.Windows.Forms.Padding(4);
+            this.CBRentPaymentType.Name = "CBRentPaymentType";
+            this.CBRentPaymentType.Size = new System.Drawing.Size(137, 24);
+            this.CBRentPaymentType.TabIndex = 56;
+            // 
+            // CBDepositPaymentType
+            // 
+            this.CBDepositPaymentType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBDepositPaymentType.FormattingEnabled = true;
+            this.CBDepositPaymentType.Items.AddRange(new object[] {
+            "Effectivo",
+            "Money Order"});
+            this.CBDepositPaymentType.Location = new System.Drawing.Point(232, 20);
+            this.CBDepositPaymentType.Margin = new System.Windows.Forms.Padding(4);
+            this.CBDepositPaymentType.Name = "CBDepositPaymentType";
+            this.CBDepositPaymentType.Size = new System.Drawing.Size(137, 24);
+            this.CBDepositPaymentType.TabIndex = 54;
             // 
             // groupBox9
             // 
-            this.groupBox9.Controls.Add(this.richTextBox3);
+            this.groupBox9.Controls.Add(this.RTBPaymentNotes);
             this.groupBox9.Location = new System.Drawing.Point(635, 11);
             this.groupBox9.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox9.Name = "groupBox9";
@@ -881,24 +884,24 @@
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Notas de Cobros:";
             // 
-            // richTextBox3
+            // RTBPaymentNotes
             // 
-            this.richTextBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox3.Location = new System.Drawing.Point(4, 19);
-            this.richTextBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(263, 46);
-            this.richTextBox3.TabIndex = 0;
-            this.richTextBox3.Text = "";
+            this.RTBPaymentNotes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RTBPaymentNotes.Location = new System.Drawing.Point(4, 19);
+            this.RTBPaymentNotes.Margin = new System.Windows.Forms.Padding(4);
+            this.RTBPaymentNotes.Name = "RTBPaymentNotes";
+            this.RTBPaymentNotes.Size = new System.Drawing.Size(263, 46);
+            this.RTBPaymentNotes.TabIndex = 0;
+            this.RTBPaymentNotes.Text = "";
             // 
-            // dateTimePicker3
+            // DTPRentPaymentDate
             // 
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker3.Location = new System.Drawing.Point(493, 21);
-            this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(132, 22);
-            this.dateTimePicker3.TabIndex = 48;
+            this.DTPRentPaymentDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DTPRentPaymentDate.Location = new System.Drawing.Point(493, 21);
+            this.DTPRentPaymentDate.Margin = new System.Windows.Forms.Padding(4);
+            this.DTPRentPaymentDate.Name = "DTPRentPaymentDate";
+            this.DTPRentPaymentDate.Size = new System.Drawing.Size(132, 22);
+            this.DTPRentPaymentDate.TabIndex = 48;
             // 
             // label6
             // 
@@ -910,13 +913,13 @@
             this.label6.TabIndex = 16;
             this.label6.Text = "Fecha De Pago:";
             // 
-            // textBox9
+            // TBRentPaymentDay
             // 
-            this.textBox9.Location = new System.Drawing.Point(532, 52);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(93, 22);
-            this.textBox9.TabIndex = 18;
+            this.TBRentPaymentDay.Location = new System.Drawing.Point(532, 52);
+            this.TBRentPaymentDay.Margin = new System.Windows.Forms.Padding(4);
+            this.TBRentPaymentDay.Name = "TBRentPaymentDay";
+            this.TBRentPaymentDay.Size = new System.Drawing.Size(93, 22);
+            this.TBRentPaymentDay.TabIndex = 18;
             // 
             // label7
             // 
@@ -930,7 +933,7 @@
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.richTextBox1);
+            this.groupBox7.Controls.Add(this.RTBAdditionalNotes);
             this.groupBox7.Location = new System.Drawing.Point(327, 610);
             this.groupBox7.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox7.Name = "groupBox7";
@@ -940,19 +943,19 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Gastos y Notas Aditionales:";
             // 
-            // richTextBox1
+            // RTBAdditionalNotes
             // 
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Location = new System.Drawing.Point(4, 19);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(911, 50);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.RTBAdditionalNotes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RTBAdditionalNotes.Location = new System.Drawing.Point(4, 19);
+            this.RTBAdditionalNotes.Margin = new System.Windows.Forms.Padding(4);
+            this.RTBAdditionalNotes.Name = "RTBAdditionalNotes";
+            this.RTBAdditionalNotes.Size = new System.Drawing.Size(911, 50);
+            this.RTBAdditionalNotes.TabIndex = 0;
+            this.RTBAdditionalNotes.Text = "";
             // 
             // groupBox11
             // 
-            this.groupBox11.Controls.Add(this.richTextBox5);
+            this.groupBox11.Controls.Add(this.RTBOtherMonthlyExpencess);
             this.groupBox11.Location = new System.Drawing.Point(13, 519);
             this.groupBox11.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox11.Name = "groupBox11";
@@ -962,15 +965,15 @@
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Gastos y Notas de Reparaciones:";
             // 
-            // richTextBox5
+            // RTBOtherMonthlyExpencess
             // 
-            this.richTextBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox5.Location = new System.Drawing.Point(4, 19);
-            this.richTextBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.richTextBox5.Name = "richTextBox5";
-            this.richTextBox5.Size = new System.Drawing.Size(295, 141);
-            this.richTextBox5.TabIndex = 0;
-            this.richTextBox5.Text = "";
+            this.RTBOtherMonthlyExpencess.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RTBOtherMonthlyExpencess.Location = new System.Drawing.Point(4, 19);
+            this.RTBOtherMonthlyExpencess.Margin = new System.Windows.Forms.Padding(4);
+            this.RTBOtherMonthlyExpencess.Name = "RTBOtherMonthlyExpencess";
+            this.RTBOtherMonthlyExpencess.Size = new System.Drawing.Size(295, 141);
+            this.RTBOtherMonthlyExpencess.TabIndex = 0;
+            this.RTBOtherMonthlyExpencess.Text = "";
             // 
             // PBApartmentImage
             // 
@@ -1067,8 +1070,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox TBDepositAmount;
+        private System.Windows.Forms.TextBox TBRentAmount;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.CheckBox CBGas;
@@ -1079,35 +1082,35 @@
         private System.Windows.Forms.CheckBox CBWatter;
         private System.Windows.Forms.TextBox TBTrash;
         private System.Windows.Forms.CheckBox CBTrash;
-        private System.Windows.Forms.TextBox TBTenants1;
+        private System.Windows.Forms.TextBox TBTenantsName1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox TBTenants2;
+        private System.Windows.Forms.TextBox TBTenantsName2;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox TBTenants4;
+        private System.Windows.Forms.TextBox TBTenantsName4;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox TBTenants3;
+        private System.Windows.Forms.TextBox TBTenantsName3;
         private System.Windows.Forms.TextBox TBMiddleInitial;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker DTPStartingDay;
         private System.Windows.Forms.MonthCalendar Calender;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox RTBTenantsNotes;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox TBRentPaymentDay;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.RichTextBox RTBAdditionalNotes;
+        private System.Windows.Forms.ComboBox CBRentPaymentType;
+        private System.Windows.Forms.ComboBox CBDepositPaymentType;
         private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.RichTextBox richTextBox3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.RichTextBox RTBPaymentNotes;
+        private System.Windows.Forms.DateTimePicker DTPRentPaymentDate;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.TextBox TBTenantsPhoneNumber6;
         private System.Windows.Forms.Label label26;
@@ -1121,21 +1124,21 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox TBTenantsPhoneNumber1;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox TBTenants6;
-        private System.Windows.Forms.TextBox TBTenants5;
+        private System.Windows.Forms.TextBox TBTenantsName6;
+        private System.Windows.Forms.TextBox TBTenantsName5;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox TBOcupation;
         private System.Windows.Forms.TextBox TBLastName;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox TBPhoneNumber;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker DTPEndingDay;
         private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.RichTextBox richTextBox4;
+        private System.Windows.Forms.RichTextBox RTBUtilitiesNotes;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox11;
-        private System.Windows.Forms.RichTextBox richTextBox5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker4;
+        private System.Windows.Forms.RichTextBox RTBOtherMonthlyExpencess;
+        private System.Windows.Forms.DateTimePicker DTPDOB;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.PictureBox PBApartmentImage;
         private System.Windows.Forms.PictureBox PBPictureID;

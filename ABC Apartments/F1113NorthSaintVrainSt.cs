@@ -19,7 +19,7 @@ namespace ABC_Apartments
 
         private void BRent_Click(object sender, EventArgs e)
         {
-            InformationForm iF1113NorthSaintVrainSt = new InformationForm("1113 North Saint Vrain St", ABC_Apartments.Properties.Resources._1113_North_Saint_Vrain_St);
+            InformationForm iF1113NorthSaintVrainSt = new InformationForm("1113 North Saint Vrain St", ABC_Apartments.Properties.Resources._1113_North_Saint_Vrain_St, "E:\\Users\\Jag\\Documents\\ABC Apartements\\1113_North_Saint_Vrain_St.xml");
             iF1113NorthSaintVrainSt.Show();
         }
     }

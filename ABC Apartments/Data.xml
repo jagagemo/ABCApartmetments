@@ -1,1 +1,74 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Apartment>
+  <Address>123 Fake St.</Address>
+  <Date>
+    <Date></Date>
+    <Tenants>
+      <Main_Tenant>
+        <First_Name>Name</First_Name>
+        <Middle_Initial>M</Middle_Initial>
+        <Last_Name>Last</Last_Name>
+        <Phone_Number>+1(012)345-6789</Phone_Number>
+        <Ocupation>Job</Ocupation>
+        <DOB>4/2/2013 11:10:47 PM</DOB>
+        <ID_Location>D:\Pictures\23475623.jpg</ID_Location>
+      </Main_Tenant>
+      <Other_Tenants>
+        <Tenant_2>
+          <Name>Name 2</Name>
+          <Phone_Number>+2(012)345-6789</Phone_Number>
+        </Tenant_2>
+        <Tenant_3>
+          <Name>Name 3</Name>
+          <Phone_Number>+3(012)345-6789</Phone_Number>
+        </Tenant_3>
+        <Tenant_4>
+          <Name>Name 4</Name>
+          <Phone_Number>+4(012)345-6789</Phone_Number>
+        </Tenant_4>
+        <Tenant_5>
+          <Name>Name 5</Name>
+          <Phone_Number>+5(012)345-6789</Phone_Number>
+        </Tenant_5>
+        <Tenant_6>
+          <Name>Name 6</Name>
+          <Phone_Number>+6(012)345-6789</Phone_Number>
+        </Tenant_6>
+      </Other_Tenants>
+      <Starting_Date>5/20/1913 11:10:47 PM</Starting_Date>
+      <Ending_Date>7/24/1999 11:10:47 PM</Ending_Date>
+      <Tenants_Notes>Tenant's notes</Tenants_Notes>
+    </Tenants>
+    <Payments>
+      <Deposit_Payment_Amount>7891</Deposit_Payment_Amount>
+      <Deposit_Payment_Type>Effectivo</Deposit_Payment_Type>
+      <Deposit_Payment_Date>8/14/1989 11:10:47 PM</Deposit_Payment_Date>
+      
+      <Rent_Payment_Amount>12345</Rent_Payment_Amount>
+      <Rent_Payment_Type>Money Order</Rent_Payment_Type>
+      <Rent_Paymnet_Date>6</Rent_Paymnet_Date>
+      
+      <Payment_Notes>Payment notes.</Payment_Notes>
+    </Payments>
+    <Utilities>
+      <Gas_We_Pay>true</Gas_We_Pay>
+      <Gas_Payment>4645</Gas_Payment>
+        
+      <Electric_We_Pay>false</Electric_We_Pay>
+      <Electric_Payment>675675</Electric_Payment>
+        
+      <Water_We_Pay>true</Water_We_Pay>
+      <Water_Payment>13123</Water_Payment>
+        
+      <Trash_We_Pay>false</Trash_We_Pay>
+      <Trash_Payment>2852852</Trash_Payment>
+
+      <Utilities_Notes>Utilities Notes.</Utilities_Notes>
+    </Utilities>
+    <Notes>
+      <Other_Monthly_Expencess>Other Monthly Expencess</Other_Monthly_Expencess>
+      <Additional_Notes>Additional Notes</Additional_Notes>
+    </Notes>
+  </Date>
+</Apartment>
