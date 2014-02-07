@@ -658,8 +658,11 @@
             // 
             this.Calender.Location = new System.Drawing.Point(977, 8);
             this.Calender.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
+            this.Calender.MaxDate = new System.DateTime(2100, 1, 1, 0, 0, 0, 0);
+            this.Calender.MaxSelectionCount = 31;
             this.Calender.Name = "Calender";
             this.Calender.TabIndex = 49;
+            this.Calender.TodayDate = new System.DateTime(((long)(0)));
             // 
             // groupBox3
             // 

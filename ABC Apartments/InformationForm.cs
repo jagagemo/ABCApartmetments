@@ -12,214 +12,203 @@ using System.Xml;
 namespace ABC_Apartments{
     public partial class InformationForm : Form{
         //Local Varables
+        private string address;
         private string tBFirstNameDefaultValue = "Primer Nombre";
         private string tBMiddleInitialDefaultValue = "In";
         private string tBLastNameDefaultValue = "Apellido";
         private string tBTenantsDefaultValue = "Nombre Completo";
         private string pictureIDLocation = "";
         private string xmlSaveFileLocation;
-        private readonly string xmlSkeleton = 
-            "<?xml version=\"1.0\" encoding=\"utf-8\" ?>" + "\n" +
-                "<Apartment>" + "\n" +
-                  "<Address></Address>" + "\n" +
-                  "<Date>" + "\n" +
-                    "<Date></Date>" + "\n" +
-                    "<Tenants>" + "\n" +
-                      "<Main_Tenant>" + "\n" +
-                        "<First_Name></First_Name>" + "\n" +
-                        "<Middle_Initial></Middle_Initial>" + "\n" +
-                        "<Last_Name></Last_Name>" + "\n" +
-                        "<Phone_Number></Phone_Number>" + "\n" +
-                        "<Ocupation></Ocupation>" + "\n" +
-                        "<DOB></DOB>" + "\n" +
-                        "<ID_Location></ID_Location>" + "\n" +
-                      "</Main_Tenant>" + "\n" +
-                      "<Other_Tenants>" + "\n" +
-                        "<Tenant_2>" + "\n" +
-                          "<Name></Name>" + "\n" +
-                          "<Phone_Number></Phone_Number>" + "\n" +
-                        "</Tenant_2>" + "\n" +
-                        "<Tenant_3>" + "\n" +
-                          "<Name></Name>" + "\n" +
-                          "<Phone_Number></Phone_Number>" + "\n" +
-                        "</Tenant_3>" + "\n" +
-                        "<Tenant_4>" + "\n" +
-                          "<Name></Name>" + "\n" +
-                          "<Phone_Number></Phone_Number>" + "\n" +
-                        "</Tenant_4>" + "\n" +
-                        "<Tenant_5>" + "\n" +
-                          "<Name></Name>" + "\n" +
-                          "<Phone_Number></Phone_Number>" + "\n" +
-                        "</Tenant_5>" + "\n" +
-                        "<Tenant_6>" + "\n" +
-                          "<Name></Name>" + "\n" +
-                          "<Phone_Number></Phone_Number>" + "\n" +
-                        "</Tenant_6>" + "\n" +
-                      "</Other_Tenants>" + "\n" +
-                      "<Starting_Date></Starting_Date>" + "\n" +
-                      "<Ending_Date></Ending_Date>" + "\n" +
-                      "<Tenants_Notes></Tenants_Notes>" + "\n" +
-                    "</Tenants>" + "\n" +
-                    "<Payments>" + "\n" +
-                      "<Deposit_Payment_Amount></Deposit_Payment_Amount>" + "\n" +
-                      "<Deposit_Payment_Type></Deposit_Payment_Type>" + "\n" +
-                      "<Deposit_Payment_Date></Deposit_Payment_Date>" + "\n" +
-                      "<Rent_Payment_Amount></Rent_Payment_Amount>" + "\n" +
-                      "<Rent_Payment_Type></Rent_Payment_Type>" + "\n" +
-                      "<Rent_Paymnet_Date></Rent_Paymnet_Date>" + "\n" +
-                      "<Payment_Notes></Payment_Notes>" + "\n" +
-                    "</Payments>" + "\n" +
-                    "<Utilities>" + "\n" +
-                      "<Gas_We_Pay></Gas_We_Pay>" + "\n" +
-                      "<Gas_Payment></Gas_Payment>" + "\n" +
-                      "<Electric_We_Pay></Electric_We_Pay>" + "\n" +
-                      "<Electric_Payment></Electric_Payment>" + "\n" +
-                      "<Water_We_Pay></Water_We_Pay>" + "\n" +
-                      "<Water_Payment></Water_Payment>" + "\n" +
-                      "<Trash_We_Pay></Trash_We_Pay>" + "\n" +
-                      "<Trash_Payment></Trash_Payment>" + "\n" +
-                      "<Utilities_Notes></Utilities_Notes>" + "\n" +
-                    "</Utilities>" + "\n" +
-                    "<Notes>" + "\n" +
-                      "<Other_Monthly_Expencess></Other_Monthly_Expencess>" + "\n" +
-                      "<Additional_Notes></Additional_Notes>" + "\n" +
-                    "</Notes>" + "\n" +
-                  "</Date>" + "\n" +
-                "</Apartment>";
+ 
         //Constructor
         public InformationForm(string title, Image image, string xmlSaveFileLocation){
             InitializeComponent();
             this.xmlSaveFileLocation = xmlSaveFileLocation;
-            this.Text = title;
+            address = title;
+            this.Text = address;
             PBApartmentImage.Image = image;
 
-            populate();
+            populate(DateTime.Today);
             testDefaults();
         }
 
-        private void populate(){
+        private void populate(DateTime Date_InstanceValue)
+        {
+            //Set Defualt Calender Values.
+            Calender.MaxDate = DateTime.Today;
+            Calender.SetDate(Date_InstanceValue);
+            Calender.TodayDate = Date_InstanceValue;
+            Calender.SelectionEnd = DateTime.Today;
+
+            //Test if the File Exists
             if (!System.IO.File.Exists(xmlSaveFileLocation))
             {
-                XmlTextWriter writer = new XmlTextWriter(xmlSaveFileLocation, null);
-                XmlDocument temp = new XmlDocument();
-                temp.LoadXml(xmlSkeleton);
-                temp.Save(writer);
-                writer.Close();
+                return;
             }
+
             //Instanciate the XMLDocument object.
-            XmlDocument doc = new XmlDocument();
-            doc.Load(xmlSaveFileLocation);
+            XmlDocument xmlDoc = new XmlDocument();
+            xmlDoc.Load(xmlSaveFileLocation);
+
+            /*
+            int i = 1;
+            foreach (var ChildNodes in xmlDoc)
+            {
+                string start = xmlDoc.ChildNodes.Item(1).ChildNodes.Item(i).Attributes.GetNamedItem("Start_Day").Value;
+                string end = xmlDoc.ChildNodes.Item(1).ChildNodes.Item(i).Attributes.GetNamedItem("End_Day").Value;
+
+                if( (DateTime.Compare(Date_InstanceValue, DateTime.Parse(start)) >= 0 ) &&
+                    (DateTime.Compare(Date_InstanceValue, DateTime.Parse(end)) <= 0) )
+                {
+                    break;
+                }
+                i++;
+	        }
+
+            Console.WriteLine(i);
+            
+            /*
+            XmlNode temp;
+            try
+            {
+                temp = xmlDoc.SelectSingleNode("//Address[@Start_Day='" + Date_InstanceValue + "']");
+            }
+            catch
+            {
+
+            }
+            */
+
+            //Start Day
+            try
+            {
+                DTPStartingDay.Value = DateTime.Parse(xmlDoc.SelectSingleNode("/Apartment/Date_Instance").Attributes.GetNamedItem("Start_Day").Value);
+            }
+            catch { }
+
+            //End Day
+            try
+            {
+                DTPEndingDay.Value = DateTime.Parse(xmlDoc.SelectSingleNode("/Apartment/Date_Instance").Attributes.GetNamedItem("End_Day").Value);
+            }
+            catch { }
+
+            //Calender
+            try
+            {
+                Calender.SetDate(Date_InstanceValue);
+            }
+            catch{ }
 
             //Main Tenant
-            TBFirstName.Text = doc.SelectSingleNode("/Apartment/Date/Tenants/Main_Tenant/First_Name").InnerText;
-            TBMiddleInitial.Text = doc.SelectSingleNode("/Apartment/Date/Tenants/Main_Tenant/Middle_Initial").InnerText;
-            TBLastName.Text = doc.SelectSingleNode("/Apartment/Date/Tenants/Main_Tenant/Last_Name").InnerText;
-            TBPhoneNumber.Text = doc.SelectSingleNode("/Apartment/Date/Tenants/Main_Tenant/Phone_Number").InnerText;
-            TBOcupation.Text = doc.SelectSingleNode("/Apartment/Date/Tenants/Main_Tenant/Ocupation").InnerText;
+            TBFirstName.Text = xmlDoc.SelectSingleNode(    "/Apartment/Date_Instance/Tenants/Main_Tenant/First_Name").InnerText;
+            TBMiddleInitial.Text = xmlDoc.SelectSingleNode("/Apartment/Date_Instance/Tenants/Main_Tenant/Middle_Initial").InnerText;
+            TBLastName.Text = xmlDoc.SelectSingleNode(     "/Apartment/Date_Instance/Tenants/Main_Tenant/Last_Name").InnerText;
+            TBPhoneNumber.Text = xmlDoc.SelectSingleNode(  "/Apartment/Date_Instance/Tenants/Main_Tenant/Phone_Number").InnerText;
+            TBOcupation.Text = xmlDoc.SelectSingleNode(    "/Apartment/Date_Instance/Tenants/Main_Tenant/Ocupation").InnerText;
 
-            if (doc.SelectSingleNode("/Apartment/Date/Tenants/Main_Tenant/DOB").InnerText != "")
+            try
             {
-                DTPDOB.Value = DateTime.Parse(doc.SelectSingleNode("/Apartment/Date/Tenants/Main_Tenant/DOB").InnerText);
+                DTPDOB.Value = DateTime.Parse(xmlDoc.SelectSingleNode("/Apartment/Date_Instance/Tenants/Main_Tenant/DOB").InnerText);
             }
+            catch { }
             
-
             //Picture ID
-            pictureIDLocation = doc.SelectSingleNode("/Apartment/Date/Tenants/Main_Tenant/ID_Location").InnerText;
-            if (pictureIDLocation != "")
+            pictureIDLocation = xmlDoc.SelectSingleNode("/Apartment/Date_Instance/Tenants/Main_Tenant/ID_Location").InnerText;
+            try
             {
                 PBPictureID.Image = Image.FromFile(pictureIDLocation);
             }
+            catch
+            {
+                pictureIDLocation = "";
+            }
+
             //Other Tenants
             TBTenantsName1.Text = TBFirstName.Text + " " + TBMiddleInitial.Text + ". " + TBLastName.Text;
             TBTenantsPhoneNumber1.Text = TBPhoneNumber.Text;
             //Tenant 2
-            TBTenantsName2.Text = doc.SelectSingleNode("/Apartment/Date/Tenants/Other_Tenants/Tenant_2/Name").InnerText;
-            TBTenantsPhoneNumber2.Text = doc.SelectSingleNode("/Apartment/Date/Tenants/Other_Tenants/Tenant_2/Phone_Number").InnerText;
+            TBTenantsName2.Text = xmlDoc.SelectSingleNode(         "/Apartment/Date_Instance/Tenants/Tenant_2/Name").InnerText;
+            TBTenantsPhoneNumber2.Text = xmlDoc.SelectSingleNode(  "/Apartment/Date_Instance/Tenants/Tenant_2/Phone_Number").InnerText;
             //Tenant 3
-            TBTenantsName3.Text = doc.SelectSingleNode("/Apartment/Date/Tenants/Other_Tenants/Tenant_3/Name").InnerText;
-            TBTenantsPhoneNumber3.Text = doc.SelectSingleNode("/Apartment/Date/Tenants/Other_Tenants/Tenant_3/Phone_Number").InnerText;
+            TBTenantsName3.Text = xmlDoc.SelectSingleNode(         "/Apartment/Date_Instance/Tenants/Tenant_3/Name").InnerText;
+            TBTenantsPhoneNumber3.Text = xmlDoc.SelectSingleNode(  "/Apartment/Date_Instance/Tenants/Tenant_3/Phone_Number").InnerText;
             //Tenant 4
-            TBTenantsName4.Text = doc.SelectSingleNode("/Apartment/Date/Tenants/Other_Tenants/Tenant_4/Name").InnerText;
-            TBTenantsPhoneNumber4.Text = doc.SelectSingleNode("/Apartment/Date/Tenants/Other_Tenants/Tenant_4/Phone_Number").InnerText;
+            TBTenantsName4.Text = xmlDoc.SelectSingleNode(         "/Apartment/Date_Instance/Tenants/Tenant_4/Name").InnerText;
+            TBTenantsPhoneNumber4.Text = xmlDoc.SelectSingleNode(  "/Apartment/Date_Instance/Tenants/Tenant_4/Phone_Number").InnerText;
             //Tenant 5
-            TBTenantsName5.Text = doc.SelectSingleNode("/Apartment/Date/Tenants/Other_Tenants/Tenant_5/Name").InnerText;
-            TBTenantsPhoneNumber5.Text = doc.SelectSingleNode("/Apartment/Date/Tenants/Other_Tenants/Tenant_5/Phone_Number").InnerText;
+            TBTenantsName5.Text = xmlDoc.SelectSingleNode(         "/Apartment/Date_Instance/Tenants/Tenant_5/Name").InnerText;
+            TBTenantsPhoneNumber5.Text = xmlDoc.SelectSingleNode(  "/Apartment/Date_Instance/Tenants/Tenant_5/Phone_Number").InnerText;
             //Tenant 6
-            TBTenantsName6.Text = doc.SelectSingleNode("/Apartment/Date/Tenants/Other_Tenants/Tenant_6/Name").InnerText;
-            TBTenantsPhoneNumber6.Text = doc.SelectSingleNode("/Apartment/Date/Tenants/Other_Tenants/Tenant_6/Phone_Number").InnerText;
+            TBTenantsName6.Text = xmlDoc.SelectSingleNode(         "/Apartment/Date_Instance/Tenants/Tenant_6/Name").InnerText;
+            TBTenantsPhoneNumber6.Text = xmlDoc.SelectSingleNode(  "/Apartment/Date_Instance/Tenants/Tenant_6/Phone_Number").InnerText;
 
-            if (doc.SelectSingleNode("/Apartment/Date/Tenants/Starting_Date").InnerText != "")
-            {
-                DTPStartingDay.Value = DateTime.Parse(doc.SelectSingleNode("/Apartment/Date/Tenants/Starting_Date").InnerText);
-            }
-            if (doc.SelectSingleNode("/Apartment/Date/Tenants/Ending_Date").InnerText != "")
-            {
-                DTPEndingDay.Value = DateTime.Parse(doc.SelectSingleNode("/Apartment/Date/Tenants/Ending_Date").InnerText);
-            }
-            RTBTenantsNotes.Text = doc.SelectSingleNode("/Apartment/Date/Tenants/Tenants_Notes").InnerText;
+            RTBTenantsNotes.Text = xmlDoc.SelectSingleNode("/Apartment/Date_Instance/Tenants/Tenants_Notes").InnerText;
 
             //Payments
             //Deposit
-            TBDepositAmount.Text = doc.SelectSingleNode("/Apartment/Date/Payments/Deposit_Payment_Amount").InnerText;
-            CBDepositPaymentType.SelectedItem = doc.SelectSingleNode("/Apartment/Date/Payments/Deposit_Payment_Type").InnerText;
-            if (doc.SelectSingleNode("/Apartment/Date/Payments/Deposit_Payment_Date").InnerText != "")
+            TBDepositAmount.Text = xmlDoc.SelectSingleNode(                "/Apartment/Date_Instance/Payments/Deposit_Payment_Amount").InnerText;
+            CBDepositPaymentType.SelectedItem = xmlDoc.SelectSingleNode(   "/Apartment/Date_Instance/Payments/Deposit_Payment_Type").InnerText;
+            try
             {
-                DTPRentPaymentDate.Value = DateTime.Parse(doc.SelectSingleNode("/Apartment/Date/Payments/Deposit_Payment_Date").InnerText);
+                DTPRentPaymentDate.Value = DateTime.Parse(xmlDoc.SelectSingleNode("/Apartment/Date_Instance/Payments/Deposit_Payment_Date").InnerText);
             }
+            catch { }
+
             //Rent
-            TBRentAmount.Text = doc.SelectSingleNode("/Apartment/Date/Payments/Rent_Payment_Amount").InnerText;
-            CBRentPaymentType.SelectedItem = doc.SelectSingleNode("/Apartment/Date/Payments/Rent_Payment_Type").InnerText;
-            TBRentPaymentDay.Text = doc.SelectSingleNode("/Apartment/Date/Payments/Rent_Paymnet_Date").InnerText;
+            TBRentAmount.Text = xmlDoc.SelectSingleNode(               "/Apartment/Date_Instance/Payments/Rent_Payment_Amount").InnerText;
+            CBRentPaymentType.SelectedItem = xmlDoc.SelectSingleNode(  "/Apartment/Date_Instance/Payments/Rent_Payment_Type").InnerText;
+            TBRentPaymentDay.Text = xmlDoc.SelectSingleNode(           "/Apartment/Date_Instance/Payments/Rent_Paymnet_Date").InnerText;
 
             //Notes
-            RTBPaymentNotes.Text = doc.SelectSingleNode("/Apartment/Date/Payments/Payment_Notes").InnerText;
+            RTBPaymentNotes.Text = xmlDoc.SelectSingleNode(            "/Apartment/Date_Instance/Payments/Payment_Notes").InnerText;
 
             //Utilitties
             //Gas
             try
             {
-                CBGas.Checked = Boolean.Parse(doc.SelectSingleNode("/Apartment/Date/Utilities/Gas_We_Pay").InnerText);
+                CBGas.Checked = Boolean.Parse(xmlDoc.SelectSingleNode("/Apartment/Date_Instance/Utilities/Gas_We_Pay").InnerText);
             }
             catch(Exception){
                 CBGas.Checked = false;
             }
-            TBGas.Text = doc.SelectSingleNode("/Apartment/Date/Utilities/Gas_Payment").InnerText;
+            TBGas.Text = xmlDoc.SelectSingleNode("/Apartment/Date_Instance/Utilities/Gas_Payment").InnerText;
             //Electric
             try
             {
-                CBElectric.Checked = Boolean.Parse(doc.SelectSingleNode("/Apartment/Date/Utilities/Electric_We_Pay").InnerText);
+                CBElectric.Checked = Boolean.Parse(xmlDoc.SelectSingleNode("/Apartment/Date_Instance/Utilities/Electric_We_Pay").InnerText);
             }
             catch (Exception)
             {
                 CBElectric.Checked = false;
             }
-            TBElectric.Text = doc.SelectSingleNode("/Apartment/Date/Utilities/Electric_Payment").InnerText;
+            TBElectric.Text = xmlDoc.SelectSingleNode("/Apartment/Date_Instance/Utilities/Electric_Payment").InnerText;
             //Watter
             try
             {
-                CBWatter.Checked = Boolean.Parse(doc.SelectSingleNode("/Apartment/Date/Utilities/Water_We_Pay").InnerText);
+                CBWatter.Checked = Boolean.Parse(xmlDoc.SelectSingleNode("/Apartment/Date_Instance/Utilities/Water_We_Pay").InnerText);
             }
             catch (Exception)
             {
                 CBWatter.Checked = false;
             }
-            TBWatter.Text = doc.SelectSingleNode("/Apartment/Date/Utilities/Water_Payment").InnerText;
+            TBWatter.Text = xmlDoc.SelectSingleNode("/Apartment/Date_Instance/Utilities/Water_Payment").InnerText;
             //Trash
             try
             {
-                CBTrash.Checked = Boolean.Parse(doc.SelectSingleNode("/Apartment/Date/Utilities/Trash_We_Pay").InnerText);
+                CBTrash.Checked = Boolean.Parse(xmlDoc.SelectSingleNode("/Apartment/Date_Instance/Utilities/Trash_We_Pay").InnerText);
             }
             catch (Exception)
             {
                 CBTrash.Checked = false;
             }
-            TBTrash.Text = doc.SelectSingleNode("/Apartment/Date/Utilities/Trash_Payment").InnerText;
+            TBTrash.Text = xmlDoc.SelectSingleNode("/Apartment/Date_Instance/Utilities/Trash_Payment").InnerText;
             //Notes
-            RTBUtilitiesNotes.Text = doc.SelectSingleNode("/Apartment/Date/Utilities/Utilities_Notes").InnerText;
+            RTBUtilitiesNotes.Text = xmlDoc.SelectSingleNode("/Apartment/Date_Instance/Utilities/Utilities_Notes").InnerText;
 
             //Monthly Notes
-            RTBOtherMonthlyExpencess.Text = doc.SelectSingleNode("/Apartment/Date/Notes/Other_Monthly_Expencess").InnerText;
-            RTBAdditionalNotes.Text = doc.SelectSingleNode("/Apartment/Date/Notes/Additional_Notes").InnerText;
+            RTBOtherMonthlyExpencess.Text = xmlDoc.SelectSingleNode("/Apartment/Date_Instance/Notes/Other_Monthly_Expencess").InnerText;
+            RTBAdditionalNotes.Text = xmlDoc.SelectSingleNode("/Apartment/Date_Instance/Notes/Additional_Notes").InnerText;
         }
 
         private void testDefaults(){
@@ -521,8 +510,9 @@ namespace ABC_Apartments{
 
             if (ofd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                PBPictureID.Image = Image.FromFile(ofd.FileName);
-                BPictureID.Hide();   
+                pictureIDLocation = ofd.FileName;
+                PBPictureID.Image = Image.FromFile(pictureIDLocation);
+                BPictureID.Hide(); 
             }
         }
 
@@ -530,93 +520,288 @@ namespace ABC_Apartments{
         private void BSave_Click(object sender, EventArgs e)
         {
             // Create the XmlDocument.
-            XmlDocument doc = new XmlDocument();
-            doc.LoadXml(xmlSkeleton);
+            XmlDocument xmlDoc = new XmlDocument();
+            XmlNode xmlNode = xmlDoc.CreateNode(XmlNodeType.XmlDeclaration, "", "");
+            xmlDoc.AppendChild(xmlNode);
 
-            //Populate
-            //Main Tenant
-            doc.SelectSingleNode("/Apartment/Date/Tenants/Main_Tenant/First_Name").InnerText = TBFirstName.Text;
-            doc.SelectSingleNode("/Apartment/Date/Tenants/Main_Tenant/Middle_Initial").InnerText = TBMiddleInitial.Text;
-            doc.SelectSingleNode("/Apartment/Date/Tenants/Main_Tenant/Last_Name").InnerText = TBLastName.Text;
-            doc.SelectSingleNode("/Apartment/Date/Tenants/Main_Tenant/Phone_Number").InnerText = TBPhoneNumber.Text;
-            doc.SelectSingleNode("/Apartment/Date/Tenants/Main_Tenant/Ocupation").InnerText = TBOcupation.Text;
-            doc.SelectSingleNode("/Apartment/Date/Tenants/Main_Tenant/DOB").InnerText = DTPDOB.Value.ToString();
+            XmlElement xmlElem;
 
-            doc.SelectSingleNode("/Apartment/Date/Tenants/Main_Tenant/ID_Location").InnerText = pictureIDLocation;
+            ////Apartment////
+            xmlDoc.AppendChild(xmlDoc.CreateElement("", "Apartment", ""));
 
-            //Tenant 2
-            doc.SelectSingleNode("/Apartment/Date/Tenants/Other_Tenants/Tenant_2/Name").InnerText = TBTenantsName2.Text;
-            doc.SelectSingleNode("/Apartment/Date/Tenants/Other_Tenants/Tenant_2/Phone_Number").InnerText = TBTenantsPhoneNumber2.Text;
-            //Tenant 3
-            doc.SelectSingleNode("/Apartment/Date/Tenants/Other_Tenants/Tenant_3/Name").InnerText = TBTenantsName3.Text;
-            doc.SelectSingleNode("/Apartment/Date/Tenants/Other_Tenants/Tenant_3/Phone_Number").InnerText = TBTenantsPhoneNumber3.Text;
-            //Tenant 4
-            doc.SelectSingleNode("/Apartment/Date/Tenants/Other_Tenants/Tenant_4/Name").InnerText = TBTenantsName4.Text;
-            doc.SelectSingleNode("/Apartment/Date/Tenants/Other_Tenants/Tenant_4/Phone_Number").InnerText = TBTenantsPhoneNumber4.Text;
-            //Tenant 5
-            doc.SelectSingleNode("/Apartment/Date/Tenants/Other_Tenants/Tenant_5/Name").InnerText = TBTenantsName5.Text;
-            doc.SelectSingleNode("/Apartment/Date/Tenants/Other_Tenants/Tenant_5/Phone_Number").InnerText = TBTenantsPhoneNumber5.Text;
-            //Tenant 6
-            doc.SelectSingleNode("/Apartment/Date/Tenants/Other_Tenants/Tenant_6/Name").InnerText = TBTenantsName6.Text;
-            doc.SelectSingleNode("/Apartment/Date/Tenants/Other_Tenants/Tenant_6/Phone_Number").InnerText = TBTenantsPhoneNumber6.Text;
+            //Adress
+            xmlElem = xmlDoc.CreateElement("", "Address", "");
+            xmlElem.AppendChild(xmlDoc.CreateTextNode(address));
+            xmlDoc.ChildNodes.Item(1).AppendChild(xmlElem);
 
-            doc.SelectSingleNode("/Apartment/Date/Tenants/Starting_Date").InnerText = DTPStartingDay.Value.ToString();
-            doc.SelectSingleNode("/Apartment/Date/Tenants/Ending_Date").InnerText = DTPEndingDay.Value.ToString();
+            ////Date Instance////
+            xmlElem = xmlDoc.CreateElement("", "Date_Instance", "");
+            xmlElem.SetAttribute("Start_Day", DTPStartingDay.Value.ToString());
+            xmlElem.SetAttribute("End_Day", DTPEndingDay.Value.ToString());
+            //xmlDoc.ChildNodes.Item(1).AppendChild(xmlDoc.CreateElement("", "Date_Instance", ""));
+            xmlDoc.ChildNodes.Item(1).AppendChild(xmlElem);
+            
+            //Date
+            xmlElem = xmlDoc.CreateElement("", "Last_Modified_Date", "");
+            xmlElem.AppendChild(xmlDoc.CreateTextNode(Calender.SelectionStart.Date.ToString()));
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).AppendChild(xmlElem);
+            
+            ////Tenants////
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).AppendChild(xmlDoc.CreateElement("", "Tenants", ""));
 
-            doc.SelectSingleNode("/Apartment/Date/Tenants/Tenants_Notes").InnerText = RTBTenantsNotes.Text;
+            ////Main Tenant////
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(1).AppendChild(xmlDoc.CreateElement("", "Main_Tenant", ""));
 
-            //Payments
-            //Deposit
-            doc.SelectSingleNode("/Apartment/Date/Payments/Deposit_Payment_Amount").InnerText = TBDepositAmount.Text;
+
+            //First Name
+            xmlElem = xmlDoc.CreateElement("", "First_Name", "");
+            xmlElem.AppendChild(xmlDoc.CreateTextNode(TBFirstName.Text));
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(0).AppendChild(xmlElem);
+
+            //Middle Initial
+            xmlElem = xmlDoc.CreateElement("", "Middle_Initial", "");
+            xmlElem.AppendChild(xmlDoc.CreateTextNode(TBMiddleInitial.Text));
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(0).AppendChild(xmlElem);
+
+            //Last Name
+            xmlElem = xmlDoc.CreateElement("", "Last_Name", "");
+            xmlElem.AppendChild(xmlDoc.CreateTextNode(TBLastName.Text));
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(0).AppendChild(xmlElem);
+
+            //Phone Number
+            xmlElem = xmlDoc.CreateElement("", "Phone_Number", "");
+            xmlElem.AppendChild(xmlDoc.CreateTextNode(TBPhoneNumber.Text));
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(0).AppendChild(xmlElem);
+
+            //Ocupation
+            xmlElem = xmlDoc.CreateElement("", "Ocupation", "");
+            xmlElem.AppendChild(xmlDoc.CreateTextNode(TBOcupation.Text));
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(0).AppendChild(xmlElem);
+
+            //DOB
+            xmlElem = xmlDoc.CreateElement("", "DOB", "");
+            xmlElem.AppendChild(xmlDoc.CreateTextNode(DTPDOB.Value.ToString()));
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(0).AppendChild(xmlElem);
+
+            //ID_Location
+            xmlElem = xmlDoc.CreateElement("", "ID_Location", "");
+            xmlElem.AppendChild(xmlDoc.CreateTextNode(pictureIDLocation));
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(0).AppendChild(xmlElem);
+            
+            /**End of Main Tenant**/
+
+            ////Tenant 2////
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(1).AppendChild(xmlDoc.CreateElement("", "Tenant_2", ""));
+
+            //Name
+            xmlElem = xmlDoc.CreateElement("", "Name", "");
+            xmlElem.AppendChild(xmlDoc.CreateTextNode(TBTenantsName2.Text));
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(1).AppendChild(xmlElem);
+
+            //Phone Number
+            xmlElem = xmlDoc.CreateElement("", "Phone_Number", "");
+            xmlElem.AppendChild(xmlDoc.CreateTextNode(TBTenantsPhoneNumber2.Text));
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(1).AppendChild(xmlElem);
+
+            /**End of Tenant 2**/
+
+            ////Tenant 3////
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(1).AppendChild(xmlDoc.CreateElement("", "Tenant_3", ""));
+
+            //Name
+            xmlElem = xmlDoc.CreateElement("", "Name", "");
+            xmlElem.AppendChild(xmlDoc.CreateTextNode(TBTenantsName3.Text));
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(2).AppendChild(xmlElem);
+
+            //Phone Number
+            xmlElem = xmlDoc.CreateElement("", "Phone_Number", "");
+            xmlElem.AppendChild(xmlDoc.CreateTextNode(TBTenantsPhoneNumber3.Text));
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(2).AppendChild(xmlElem);
+
+            /**End of Tenant 3**/
+
+            ////Tenant 4////
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(1).AppendChild(xmlDoc.CreateElement("", "Tenant_4", ""));
+
+            //Name
+            xmlElem = xmlDoc.CreateElement("", "Name", "");
+            xmlElem.AppendChild(xmlDoc.CreateTextNode(TBTenantsName4.Text));
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(3).AppendChild(xmlElem);
+
+            //Phone Number
+            xmlElem = xmlDoc.CreateElement("", "Phone_Number", "");
+            xmlElem.AppendChild(xmlDoc.CreateTextNode(TBTenantsPhoneNumber4.Text));
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(3).AppendChild(xmlElem);
+
+            /**End of Tenant 4**/
+
+            ////Tenant 5////
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(1).AppendChild(xmlDoc.CreateElement("", "Tenant_5", ""));
+
+            //Name
+            xmlElem = xmlDoc.CreateElement("", "Name", "");
+            xmlElem.AppendChild(xmlDoc.CreateTextNode(TBTenantsName5.Text));
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(4).AppendChild(xmlElem);
+
+            //Phone Number
+            xmlElem = xmlDoc.CreateElement("", "Phone_Number", "");
+            xmlElem.AppendChild(xmlDoc.CreateTextNode(TBTenantsPhoneNumber5.Text));
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(4).AppendChild(xmlElem);
+
+            /**End of Tenant 5**/
+
+            ////Tenant 6////
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(1).AppendChild(xmlDoc.CreateElement("", "Tenant_6", ""));
+
+            //Name
+            xmlElem = xmlDoc.CreateElement("", "Name", "");
+            xmlElem.AppendChild(xmlDoc.CreateTextNode(TBTenantsName6.Text));
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(5).AppendChild(xmlElem);
+
+            //Phone Number
+            xmlElem = xmlDoc.CreateElement("", "Phone_Number", "");
+            xmlElem.AppendChild(xmlDoc.CreateTextNode(TBTenantsPhoneNumber6.Text));
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(5).AppendChild(xmlElem);
+
+            /**End of Tenant 6**/
+
+/*            //Starting Date
+            xmlElem = xmlDoc.CreateElement("", "Starting_Date", "");
+            xmlElem.AppendChild(xmlDoc.CreateTextNode(DTPStartingDay.Value.ToString()));
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(1).AppendChild(xmlElem);
+
+            //Ending Date
+            xmlElem = xmlDoc.CreateElement("", "Ending_Date", "");
+            xmlElem.AppendChild(xmlDoc.CreateTextNode(DTPEndingDay.Value.ToString()));
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(1).AppendChild(xmlElem);
+*/
+            //Tenants Notes
+            xmlElem = xmlDoc.CreateElement("", "Tenants_Notes", "");
+            xmlElem.AppendChild(xmlDoc.CreateTextNode(RTBTenantsNotes.Text));
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(1).AppendChild(xmlElem);
+
+            /**End of Tenants**/
+
+            ////Payments////
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).AppendChild(xmlDoc.CreateElement("", "Payments", ""));
+
+            //Deposit Payment Amount
+            xmlElem = xmlDoc.CreateElement("", "Deposit_Payment_Amount", "");
+            xmlElem.AppendChild(xmlDoc.CreateTextNode(TBDepositAmount.Text));
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(2).AppendChild(xmlElem);
+
+            //Deposit Payment Type
+            xmlElem = xmlDoc.CreateElement("", "Deposit_Payment_Type", "");
+            try{
+                xmlElem.AppendChild(xmlDoc.CreateTextNode(CBDepositPaymentType.SelectedItem.ToString()));
+            }catch (Exception){
+                xmlElem.AppendChild(xmlDoc.CreateTextNode(""));
+            }
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(2).AppendChild(xmlElem);
+
+            //Deposit Payment Date
+            xmlElem = xmlDoc.CreateElement("", "Deposit_Payment_Date", "");
+            xmlElem.AppendChild(xmlDoc.CreateTextNode(DTPRentPaymentDate.Value.ToString()));
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(2).AppendChild(xmlElem);
+            
+            //Rent Payment Amount
+            xmlElem = xmlDoc.CreateElement("", "Rent_Payment_Amount", "");
+            xmlElem.AppendChild(xmlDoc.CreateTextNode(TBRentAmount.Text));
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(2).AppendChild(xmlElem);
+
+            //Rent Payment Type
+            xmlElem = xmlDoc.CreateElement("", "Rent_Payment_Type", "");
             try
             {
-                doc.SelectSingleNode("/Apartment/Date/Payments/Deposit_Payment_Type").InnerText = CBDepositPaymentType.SelectedItem.ToString();
+                xmlElem.AppendChild(xmlDoc.CreateTextNode(CBRentPaymentType.SelectedItem.ToString()));
             }
-            catch (Exception) { }
-            doc.SelectSingleNode("/Apartment/Date/Payments/Deposit_Payment_Date").InnerText = DTPRentPaymentDate.Value.ToString();
-
-            //Rent
-            doc.SelectSingleNode("/Apartment/Date/Payments/Rent_Payment_Amount").InnerText = TBRentAmount.Text;
-            try
+            catch (Exception)
             {
-                doc.SelectSingleNode("/Apartment/Date/Payments/Rent_Payment_Type").InnerText = CBRentPaymentType.SelectedItem.ToString();
+                xmlElem.AppendChild(xmlDoc.CreateTextNode(""));
             }
-            catch (Exception) { }
-            doc.SelectSingleNode("/Apartment/Date/Payments/Rent_Paymnet_Date").InnerText = TBRentPaymentDay.Text;
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(2).AppendChild(xmlElem);
 
-            //Notes
-            doc.SelectSingleNode("/Apartment/Date/Payments/Payment_Notes").InnerText = RTBPaymentNotes.Text;
+            //Rent Payment Date
+            xmlElem = xmlDoc.CreateElement("", "Rent_Paymnet_Date", "");
+            xmlElem.AppendChild(xmlDoc.CreateTextNode(TBRentPaymentDay.Text));
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(2).AppendChild(xmlElem);
 
-            //Utilitties
-            //Gas
-            doc.SelectSingleNode("/Apartment/Date/Utilities/Gas_We_Pay").InnerText = CBGas.Checked.ToString();
-            doc.SelectSingleNode("/Apartment/Date/Utilities/Gas_Payment").InnerText = TBGas.Text;
-            //Electric
-            doc.SelectSingleNode("/Apartment/Date/Utilities/Electric_We_Pay").InnerText = CBElectric.Checked.ToString();
-            doc.SelectSingleNode("/Apartment/Date/Utilities/Electric_Payment").InnerText = TBElectric.Text;
-            //Watter
-            doc.SelectSingleNode("/Apartment/Date/Utilities/Water_We_Pay").InnerText = CBWatter.Checked.ToString();
-            doc.SelectSingleNode("/Apartment/Date/Utilities/Water_Payment").InnerText = TBWatter.Text;
-            //Trash
-            doc.SelectSingleNode("/Apartment/Date/Utilities/Trash_We_Pay").InnerText = CBTrash.Checked.ToString();
-            doc.SelectSingleNode("/Apartment/Date/Utilities/Trash_Payment").InnerText = TBTrash.Text;
-            //Notes
-            doc.SelectSingleNode("/Apartment/Date/Utilities/Utilities_Notes").InnerText = RTBUtilitiesNotes.Text;
+            //Payment Notes
+            xmlElem = xmlDoc.CreateElement("", "Payment_Notes", "");
+            xmlElem.AppendChild(xmlDoc.CreateTextNode(RTBPaymentNotes.Text));
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(2).AppendChild(xmlElem);
 
-            //Monthly Notes
-            doc.SelectSingleNode("/Apartment/Date/Notes/Other_Monthly_Expencess").InnerText = RTBOtherMonthlyExpencess.Text;
-            doc.SelectSingleNode("/Apartment/Date/Notes/Additional_Notes").InnerText = RTBAdditionalNotes.Text;
+            /**End of Payments**/
 
-            // Add a price element.
-            XmlElement newElem = doc.CreateElement("price");
-            newElem.InnerText = "10.95";
-            doc.DocumentElement.AppendChild(newElem);
+            ////Utilities////
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).AppendChild(xmlDoc.CreateElement("", "Utilities", ""));
 
-            // Save the document to a file and auto-indent the output.
-            XmlTextWriter writer = new XmlTextWriter(xmlSaveFileLocation, null);
-            writer.Formatting = Formatting.Indented;
-            doc.Save(writer);
-            writer.Close();
+            //Gas We Pay
+            xmlElem = xmlDoc.CreateElement("", "Gas_We_Pay", "");
+            xmlElem.AppendChild(xmlDoc.CreateTextNode(CBGas.Checked.ToString()));
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(3).AppendChild(xmlElem);
+
+            //Gas Payment
+            xmlElem = xmlDoc.CreateElement("", "Gas_Payment", "");
+            xmlElem.AppendChild(xmlDoc.CreateTextNode(TBGas.Text));
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(3).AppendChild(xmlElem);
+
+            //Electric We Pay
+            xmlElem = xmlDoc.CreateElement("", "Electric_We_Pay", "");
+            xmlElem.AppendChild(xmlDoc.CreateTextNode(CBElectric.Checked.ToString()));
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(3).AppendChild(xmlElem);
+
+            //Electric Payment
+            xmlElem = xmlDoc.CreateElement("", "Electric_Payment", "");
+            xmlElem.AppendChild(xmlDoc.CreateTextNode(TBElectric.Text));
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(3).AppendChild(xmlElem);
+
+            //Water We Pay
+            xmlElem = xmlDoc.CreateElement("", "Water_We_Pay", "");
+            xmlElem.AppendChild(xmlDoc.CreateTextNode(CBWatter.Checked.ToString()));
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(3).AppendChild(xmlElem);
+
+            //Water Payment
+            xmlElem = xmlDoc.CreateElement("", "Water_Payment", "");
+            xmlElem.AppendChild(xmlDoc.CreateTextNode(TBWatter.Text));
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(3).AppendChild(xmlElem);
+
+            //Trash We Pay
+            xmlElem = xmlDoc.CreateElement("", "Trash_We_Pay", "");
+            xmlElem.AppendChild(xmlDoc.CreateTextNode(CBTrash.Checked.ToString()));
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(3).AppendChild(xmlElem);
+
+            //Trash Payment
+            xmlElem = xmlDoc.CreateElement("", "Trash_Payment", "");
+            xmlElem.AppendChild(xmlDoc.CreateTextNode(TBTrash.Text));
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(3).AppendChild(xmlElem);
+
+            //Utilities Notes
+            xmlElem = xmlDoc.CreateElement("", "Utilities_Notes", "");
+            xmlElem.AppendChild(xmlDoc.CreateTextNode(RTBUtilitiesNotes.Text));
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(3).AppendChild(xmlElem);
+
+            /***End of Utilities***/
+
+            ////Notes////
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).AppendChild(xmlDoc.CreateElement("", "Notes", ""));
+
+            //Other Monthly Expencess
+            xmlElem = xmlDoc.CreateElement("", "Other_Monthly_Expencess", "");
+            xmlElem.AppendChild(xmlDoc.CreateTextNode(RTBOtherMonthlyExpencess.Text));
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(4).AppendChild(xmlElem);
+
+            //Additional Notes
+            xmlElem = xmlDoc.CreateElement("", "Additional_Notes", "");
+            xmlElem.AppendChild(xmlDoc.CreateTextNode(RTBAdditionalNotes.Text));
+            xmlDoc.ChildNodes.Item(1).ChildNodes.Item(1).ChildNodes.Item(4).AppendChild(xmlElem);
+
+            /**/
+            try{
+                xmlDoc.Save(xmlSaveFileLocation);
+			}catch (Exception er){
+				Console.WriteLine(er.Message);
+			}
         }
     }
 }
