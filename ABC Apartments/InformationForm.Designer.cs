@@ -152,7 +152,7 @@
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(32, 22);
-            this.textBox2.TabIndex = 2;
+            this.textBox2.TabIndex = 5;
             // 
             // textBox3
             // 
@@ -160,7 +160,7 @@
             this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(24, 22);
-            this.textBox3.TabIndex = 3;
+            this.textBox3.TabIndex = 6;
             // 
             // textBox4
             // 
@@ -168,7 +168,7 @@
             this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(41, 22);
-            this.textBox4.TabIndex = 4;
+            this.textBox4.TabIndex = 7;
             // 
             // label2
             // 
@@ -216,7 +216,7 @@
             this.TBDepositAmount.Margin = new System.Windows.Forms.Padding(4);
             this.TBDepositAmount.Name = "TBDepositAmount";
             this.TBDepositAmount.Size = new System.Drawing.Size(103, 22);
-            this.TBDepositAmount.TabIndex = 9;
+            this.TBDepositAmount.TabIndex = 23;
             // 
             // TBRentAmount
             // 
@@ -224,7 +224,7 @@
             this.TBRentAmount.Margin = new System.Windows.Forms.Padding(4);
             this.TBRentAmount.Name = "TBRentAmount";
             this.TBRentAmount.Size = new System.Drawing.Size(103, 22);
-            this.TBRentAmount.TabIndex = 10;
+            this.TBRentAmount.TabIndex = 26;
             // 
             // label8
             // 
@@ -239,7 +239,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(308, 22);
+            this.label10.Location = new System.Drawing.Point(328, 25);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(21, 17);
@@ -254,7 +254,7 @@
             this.CBGas.Name = "CBGas";
             this.CBGas.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CBGas.Size = new System.Drawing.Size(60, 21);
-            this.CBGas.TabIndex = 22;
+            this.CBGas.TabIndex = 30;
             this.CBGas.Text = ":Gas";
             this.CBGas.UseVisualStyleBackColor = true;
             this.CBGas.CheckedChanged += new System.EventHandler(this.CBGas_CheckedChanged);
@@ -265,7 +265,7 @@
             this.TBGas.Margin = new System.Windows.Forms.Padding(4);
             this.TBGas.Name = "TBGas";
             this.TBGas.Size = new System.Drawing.Size(132, 22);
-            this.TBGas.TabIndex = 23;
+            this.TBGas.TabIndex = 32;
             // 
             // TBElectric
             // 
@@ -273,7 +273,7 @@
             this.TBElectric.Margin = new System.Windows.Forms.Padding(4);
             this.TBElectric.Name = "TBElectric";
             this.TBElectric.Size = new System.Drawing.Size(132, 22);
-            this.TBElectric.TabIndex = 25;
+            this.TBElectric.TabIndex = 34;
             // 
             // CBElectric
             // 
@@ -283,7 +283,7 @@
             this.CBElectric.Name = "CBElectric";
             this.CBElectric.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CBElectric.Size = new System.Drawing.Size(103, 21);
-            this.CBElectric.TabIndex = 24;
+            this.CBElectric.TabIndex = 33;
             this.CBElectric.Text = ":Elecricidad";
             this.CBElectric.UseVisualStyleBackColor = true;
             this.CBElectric.CheckedChanged += new System.EventHandler(this.CBElectric_CheckedChanged);
@@ -294,7 +294,7 @@
             this.TBWatter.Margin = new System.Windows.Forms.Padding(4);
             this.TBWatter.Name = "TBWatter";
             this.TBWatter.Size = new System.Drawing.Size(132, 22);
-            this.TBWatter.TabIndex = 27;
+            this.TBWatter.TabIndex = 36;
             // 
             // CBWatter
             // 
@@ -304,7 +304,7 @@
             this.CBWatter.Name = "CBWatter";
             this.CBWatter.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CBWatter.Size = new System.Drawing.Size(67, 21);
-            this.CBWatter.TabIndex = 26;
+            this.CBWatter.TabIndex = 35;
             this.CBWatter.Text = ":Agua";
             this.CBWatter.UseVisualStyleBackColor = true;
             this.CBWatter.CheckedChanged += new System.EventHandler(this.CBWatter_CheckedChanged);
@@ -315,7 +315,7 @@
             this.TBTrash.Margin = new System.Windows.Forms.Padding(4);
             this.TBTrash.Name = "TBTrash";
             this.TBTrash.Size = new System.Drawing.Size(132, 22);
-            this.TBTrash.TabIndex = 31;
+            this.TBTrash.TabIndex = 38;
             // 
             // CBTrash
             // 
@@ -325,7 +325,7 @@
             this.CBTrash.Name = "CBTrash";
             this.CBTrash.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CBTrash.Size = new System.Drawing.Size(79, 21);
-            this.CBTrash.TabIndex = 30;
+            this.CBTrash.TabIndex = 37;
             this.CBTrash.Text = ":Basura";
             this.CBTrash.UseVisualStyleBackColor = true;
             this.CBTrash.CheckedChanged += new System.EventHandler(this.CBTrash_CheckedChanged);
@@ -337,7 +337,7 @@
             this.TBTenantsName1.Margin = new System.Windows.Forms.Padding(4);
             this.TBTenantsName1.Name = "TBTenantsName1";
             this.TBTenantsName1.Size = new System.Drawing.Size(320, 22);
-            this.TBTenantsName1.TabIndex = 33;
+            this.TBTenantsName1.TabIndex = 10;
             // 
             // label11
             // 
@@ -365,7 +365,7 @@
             this.TBTenantsName2.Margin = new System.Windows.Forms.Padding(4);
             this.TBTenantsName2.Name = "TBTenantsName2";
             this.TBTenantsName2.Size = new System.Drawing.Size(320, 22);
-            this.TBTenantsName2.TabIndex = 35;
+            this.TBTenantsName2.TabIndex = 12;
             this.TBTenantsName2.Enter += new System.EventHandler(this.TBTenants2_Enter);
             this.TBTenantsName2.Leave += new System.EventHandler(this.TBTenants2_Leave);
             // 
@@ -385,7 +385,7 @@
             this.TBTenantsName4.Margin = new System.Windows.Forms.Padding(4);
             this.TBTenantsName4.Name = "TBTenantsName4";
             this.TBTenantsName4.Size = new System.Drawing.Size(320, 22);
-            this.TBTenantsName4.TabIndex = 39;
+            this.TBTenantsName4.TabIndex = 16;
             this.TBTenantsName4.Enter += new System.EventHandler(this.TBTenants4_Enter);
             this.TBTenantsName4.Leave += new System.EventHandler(this.TBTenants4_Leave);
             // 
@@ -405,7 +405,7 @@
             this.TBTenantsName3.Margin = new System.Windows.Forms.Padding(4);
             this.TBTenantsName3.Name = "TBTenantsName3";
             this.TBTenantsName3.Size = new System.Drawing.Size(320, 22);
-            this.TBTenantsName3.TabIndex = 37;
+            this.TBTenantsName3.TabIndex = 14;
             this.TBTenantsName3.Enter += new System.EventHandler(this.TBTenants3_Enter);
             this.TBTenantsName3.Leave += new System.EventHandler(this.TBTenants3_Leave);
             // 
@@ -416,7 +416,7 @@
             this.TBMiddleInitial.MaxLength = 1;
             this.TBMiddleInitial.Name = "TBMiddleInitial";
             this.TBMiddleInitial.Size = new System.Drawing.Size(31, 22);
-            this.TBMiddleInitial.TabIndex = 41;
+            this.TBMiddleInitial.TabIndex = 2;
             this.TBMiddleInitial.Enter += new System.EventHandler(this.TBMiddleInitial_Enter);
             this.TBMiddleInitial.Leave += new System.EventHandler(this.TBMiddleInitial_Leave);
             // 
@@ -446,11 +446,11 @@
             this.groupBox1.Controls.Add(this.TBTenantsName4);
             this.groupBox1.Controls.Add(this.TBTenantsName3);
             this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Location = new System.Drawing.Point(8, 135);
+            this.groupBox1.Location = new System.Drawing.Point(8, 140);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(619, 218);
+            this.groupBox1.Size = new System.Drawing.Size(619, 220);
             this.groupBox1.TabIndex = 43;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Habitantes:";
@@ -471,7 +471,7 @@
             this.TBTenantsPhoneNumber6.Margin = new System.Windows.Forms.Padding(4);
             this.TBTenantsPhoneNumber6.Name = "TBTenantsPhoneNumber6";
             this.TBTenantsPhoneNumber6.Size = new System.Drawing.Size(145, 22);
-            this.TBTenantsPhoneNumber6.TabIndex = 56;
+            this.TBTenantsPhoneNumber6.TabIndex = 22;
             // 
             // label26
             // 
@@ -489,7 +489,7 @@
             this.TBTenantsPhoneNumber5.Margin = new System.Windows.Forms.Padding(4);
             this.TBTenantsPhoneNumber5.Name = "TBTenantsPhoneNumber5";
             this.TBTenantsPhoneNumber5.Size = new System.Drawing.Size(145, 22);
-            this.TBTenantsPhoneNumber5.TabIndex = 54;
+            this.TBTenantsPhoneNumber5.TabIndex = 20;
             // 
             // label23
             // 
@@ -507,7 +507,7 @@
             this.TBTenantsPhoneNumber4.Margin = new System.Windows.Forms.Padding(4);
             this.TBTenantsPhoneNumber4.Name = "TBTenantsPhoneNumber4";
             this.TBTenantsPhoneNumber4.Size = new System.Drawing.Size(145, 22);
-            this.TBTenantsPhoneNumber4.TabIndex = 52;
+            this.TBTenantsPhoneNumber4.TabIndex = 17;
             // 
             // label24
             // 
@@ -525,7 +525,7 @@
             this.TBTenantsPhoneNumber3.Margin = new System.Windows.Forms.Padding(4);
             this.TBTenantsPhoneNumber3.Name = "TBTenantsPhoneNumber3";
             this.TBTenantsPhoneNumber3.Size = new System.Drawing.Size(145, 22);
-            this.TBTenantsPhoneNumber3.TabIndex = 50;
+            this.TBTenantsPhoneNumber3.TabIndex = 15;
             // 
             // label22
             // 
@@ -543,7 +543,7 @@
             this.TBTenantsPhoneNumber2.Margin = new System.Windows.Forms.Padding(4);
             this.TBTenantsPhoneNumber2.Name = "TBTenantsPhoneNumber2";
             this.TBTenantsPhoneNumber2.Size = new System.Drawing.Size(145, 22);
-            this.TBTenantsPhoneNumber2.TabIndex = 48;
+            this.TBTenantsPhoneNumber2.TabIndex = 13;
             // 
             // label21
             // 
@@ -562,7 +562,7 @@
             this.TBTenantsPhoneNumber1.Margin = new System.Windows.Forms.Padding(4);
             this.TBTenantsPhoneNumber1.Name = "TBTenantsPhoneNumber1";
             this.TBTenantsPhoneNumber1.Size = new System.Drawing.Size(145, 22);
-            this.TBTenantsPhoneNumber1.TabIndex = 46;
+            this.TBTenantsPhoneNumber1.TabIndex = 11;
             // 
             // label19
             // 
@@ -580,7 +580,7 @@
             this.TBTenantsName6.Margin = new System.Windows.Forms.Padding(4);
             this.TBTenantsName6.Name = "TBTenantsName6";
             this.TBTenantsName6.Size = new System.Drawing.Size(320, 22);
-            this.TBTenantsName6.TabIndex = 43;
+            this.TBTenantsName6.TabIndex = 21;
             this.TBTenantsName6.Enter += new System.EventHandler(this.TBTenants6_Enter);
             this.TBTenantsName6.Leave += new System.EventHandler(this.TBTenants6_Leave);
             // 
@@ -590,7 +590,7 @@
             this.TBTenantsName5.Margin = new System.Windows.Forms.Padding(4);
             this.TBTenantsName5.Name = "TBTenantsName5";
             this.TBTenantsName5.Size = new System.Drawing.Size(320, 22);
-            this.TBTenantsName5.TabIndex = 41;
+            this.TBTenantsName5.TabIndex = 19;
             this.TBTenantsName5.Enter += new System.EventHandler(this.TBTenants5_Enter);
             this.TBTenantsName5.Leave += new System.EventHandler(this.TBTenants5_Leave);
             // 
@@ -643,38 +643,39 @@
             this.RTBUtilitiesNotes.Margin = new System.Windows.Forms.Padding(4);
             this.RTBUtilitiesNotes.Name = "RTBUtilitiesNotes";
             this.RTBUtilitiesNotes.Size = new System.Drawing.Size(240, 100);
-            this.RTBUtilitiesNotes.TabIndex = 0;
+            this.RTBUtilitiesNotes.TabIndex = 39;
             this.RTBUtilitiesNotes.Text = "";
             // 
             // DTPStartingDay
             // 
-            this.DTPStartingDay.Location = new System.Drawing.Point(39, 18);
+            this.DTPStartingDay.Location = new System.Drawing.Point(60, 20);
             this.DTPStartingDay.Margin = new System.Windows.Forms.Padding(4);
             this.DTPStartingDay.Name = "DTPStartingDay";
             this.DTPStartingDay.Size = new System.Drawing.Size(260, 22);
-            this.DTPStartingDay.TabIndex = 46;
+            this.DTPStartingDay.TabIndex = 43;
+            this.DTPStartingDay.ValueChanged += new System.EventHandler(this.DTPStartingDay_ValueChanged);
             // 
             // Calender
             // 
             this.Calender.Location = new System.Drawing.Point(977, 8);
             this.Calender.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
             this.Calender.MaxDate = new System.DateTime(2100, 1, 1, 0, 0, 0, 0);
-            this.Calender.MaxSelectionCount = 31;
+            this.Calender.MaxSelectionCount = 1;
             this.Calender.Name = "Calender";
-            this.Calender.TabIndex = 49;
+            this.Calender.TabIndex = 46;
             this.Calender.TodayDate = new System.DateTime(((long)(0)));
+            this.Calender.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.Calender_DateChanged);
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.groupBox8);
-            this.groupBox3.Controls.Add(this.groupBox5);
             this.groupBox3.Controls.Add(this.groupBox4);
             this.groupBox3.Controls.Add(this.groupBox1);
-            this.groupBox3.Location = new System.Drawing.Point(327, 0);
+            this.groupBox3.Location = new System.Drawing.Point(327, 66);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(635, 508);
+            this.groupBox3.Size = new System.Drawing.Size(635, 442);
             this.groupBox3.TabIndex = 50;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Informacion de Habitantes:";
@@ -682,11 +683,11 @@
             // groupBox8
             // 
             this.groupBox8.Controls.Add(this.RTBTenantsNotes);
-            this.groupBox8.Location = new System.Drawing.Point(8, 420);
+            this.groupBox8.Location = new System.Drawing.Point(8, 368);
             this.groupBox8.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox8.Size = new System.Drawing.Size(619, 81);
+            this.groupBox8.Size = new System.Drawing.Size(619, 66);
             this.groupBox8.TabIndex = 52;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Notas de Habitantes :";
@@ -697,8 +698,8 @@
             this.RTBTenantsNotes.Location = new System.Drawing.Point(4, 19);
             this.RTBTenantsNotes.Margin = new System.Windows.Forms.Padding(4);
             this.RTBTenantsNotes.Name = "RTBTenantsNotes";
-            this.RTBTenantsNotes.Size = new System.Drawing.Size(611, 58);
-            this.RTBTenantsNotes.TabIndex = 0;
+            this.RTBTenantsNotes.Size = new System.Drawing.Size(611, 43);
+            this.RTBTenantsNotes.TabIndex = 22;
             this.RTBTenantsNotes.Text = "";
             // 
             // groupBox5
@@ -707,27 +708,28 @@
             this.groupBox5.Controls.Add(this.label9);
             this.groupBox5.Controls.Add(this.label10);
             this.groupBox5.Controls.Add(this.DTPStartingDay);
-            this.groupBox5.Location = new System.Drawing.Point(8, 361);
+            this.groupBox5.Location = new System.Drawing.Point(327, 8);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox5.Size = new System.Drawing.Size(619, 50);
+            this.groupBox5.Size = new System.Drawing.Size(635, 50);
             this.groupBox5.TabIndex = 51;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Estancia:";
             // 
             // DTPEndingDay
             // 
-            this.DTPEndingDay.Location = new System.Drawing.Point(339, 18);
+            this.DTPEndingDay.Location = new System.Drawing.Point(357, 20);
             this.DTPEndingDay.Margin = new System.Windows.Forms.Padding(4);
             this.DTPEndingDay.Name = "DTPEndingDay";
             this.DTPEndingDay.Size = new System.Drawing.Size(260, 22);
-            this.DTPEndingDay.TabIndex = 47;
+            this.DTPEndingDay.TabIndex = 44;
+            this.DTPEndingDay.ValueChanged += new System.EventHandler(this.DTPEndingDay_ValueChanged);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(5, 22);
+            this.label9.Location = new System.Drawing.Point(22, 25);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(30, 17);
@@ -752,11 +754,11 @@
             this.groupBox4.Controls.Add(this.textBox3);
             this.groupBox4.Controls.Add(this.textBox4);
             this.groupBox4.Controls.Add(this.label2);
-            this.groupBox4.Location = new System.Drawing.Point(8, 18);
+            this.groupBox4.Location = new System.Drawing.Point(8, 23);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Size = new System.Drawing.Size(619, 114);
+            this.groupBox4.Size = new System.Drawing.Size(619, 109);
             this.groupBox4.TabIndex = 44;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Persona Responsable:";
@@ -768,7 +770,7 @@
             this.DTPDOB.Margin = new System.Windows.Forms.Padding(4);
             this.DTPDOB.Name = "DTPDOB";
             this.DTPDOB.Size = new System.Drawing.Size(132, 22);
-            this.DTPDOB.TabIndex = 50;
+            this.DTPDOB.TabIndex = 8;
             // 
             // label15
             // 
@@ -796,7 +798,7 @@
             this.TBOcupation.Margin = new System.Windows.Forms.Padding(4);
             this.TBOcupation.Name = "TBOcupation";
             this.TBOcupation.Size = new System.Drawing.Size(251, 22);
-            this.TBOcupation.TabIndex = 47;
+            this.TBOcupation.TabIndex = 9;
             // 
             // TBLastName
             // 
@@ -804,7 +806,7 @@
             this.TBLastName.Margin = new System.Windows.Forms.Padding(4);
             this.TBLastName.Name = "TBLastName";
             this.TBLastName.Size = new System.Drawing.Size(116, 22);
-            this.TBLastName.TabIndex = 45;
+            this.TBLastName.TabIndex = 3;
             this.TBLastName.Enter += new System.EventHandler(this.TBLastName_Enter);
             this.TBLastName.Leave += new System.EventHandler(this.TBLastName_Leave);
             // 
@@ -824,7 +826,7 @@
             this.TBPhoneNumber.Margin = new System.Windows.Forms.Padding(4);
             this.TBPhoneNumber.Name = "TBPhoneNumber";
             this.TBPhoneNumber.Size = new System.Drawing.Size(145, 22);
-            this.TBPhoneNumber.TabIndex = 44;
+            this.TBPhoneNumber.TabIndex = 4;
             this.TBPhoneNumber.Leave += new System.EventHandler(this.TBPhoneNumber_Leave);
             // 
             // groupBox6
@@ -860,7 +862,7 @@
             this.CBRentPaymentType.Margin = new System.Windows.Forms.Padding(4);
             this.CBRentPaymentType.Name = "CBRentPaymentType";
             this.CBRentPaymentType.Size = new System.Drawing.Size(137, 24);
-            this.CBRentPaymentType.TabIndex = 56;
+            this.CBRentPaymentType.TabIndex = 27;
             // 
             // CBDepositPaymentType
             // 
@@ -873,7 +875,7 @@
             this.CBDepositPaymentType.Margin = new System.Windows.Forms.Padding(4);
             this.CBDepositPaymentType.Name = "CBDepositPaymentType";
             this.CBDepositPaymentType.Size = new System.Drawing.Size(137, 24);
-            this.CBDepositPaymentType.TabIndex = 54;
+            this.CBDepositPaymentType.TabIndex = 24;
             // 
             // groupBox9
             // 
@@ -894,7 +896,7 @@
             this.RTBPaymentNotes.Margin = new System.Windows.Forms.Padding(4);
             this.RTBPaymentNotes.Name = "RTBPaymentNotes";
             this.RTBPaymentNotes.Size = new System.Drawing.Size(263, 46);
-            this.RTBPaymentNotes.TabIndex = 0;
+            this.RTBPaymentNotes.TabIndex = 29;
             this.RTBPaymentNotes.Text = "";
             // 
             // DTPRentPaymentDate
@@ -904,7 +906,7 @@
             this.DTPRentPaymentDate.Margin = new System.Windows.Forms.Padding(4);
             this.DTPRentPaymentDate.Name = "DTPRentPaymentDate";
             this.DTPRentPaymentDate.Size = new System.Drawing.Size(132, 22);
-            this.DTPRentPaymentDate.TabIndex = 48;
+            this.DTPRentPaymentDate.TabIndex = 25;
             // 
             // label6
             // 
@@ -922,7 +924,7 @@
             this.TBRentPaymentDay.Margin = new System.Windows.Forms.Padding(4);
             this.TBRentPaymentDay.Name = "TBRentPaymentDay";
             this.TBRentPaymentDay.Size = new System.Drawing.Size(93, 22);
-            this.TBRentPaymentDay.TabIndex = 18;
+            this.TBRentPaymentDay.TabIndex = 28;
             // 
             // label7
             // 
@@ -953,7 +955,7 @@
             this.RTBAdditionalNotes.Margin = new System.Windows.Forms.Padding(4);
             this.RTBAdditionalNotes.Name = "RTBAdditionalNotes";
             this.RTBAdditionalNotes.Size = new System.Drawing.Size(911, 50);
-            this.RTBAdditionalNotes.TabIndex = 0;
+            this.RTBAdditionalNotes.TabIndex = 42;
             this.RTBAdditionalNotes.Text = "";
             // 
             // groupBox11
@@ -975,7 +977,7 @@
             this.RTBOtherMonthlyExpencess.Margin = new System.Windows.Forms.Padding(4);
             this.RTBOtherMonthlyExpencess.Name = "RTBOtherMonthlyExpencess";
             this.RTBOtherMonthlyExpencess.Size = new System.Drawing.Size(295, 141);
-            this.RTBOtherMonthlyExpencess.TabIndex = 0;
+            this.RTBOtherMonthlyExpencess.TabIndex = 41;
             this.RTBOtherMonthlyExpencess.Text = "";
             // 
             // PBApartmentImage
@@ -1001,10 +1003,10 @@
             // 
             // BSave
             // 
-            this.BSave.Location = new System.Drawing.Point(12, 12);
+            this.BSave.Location = new System.Drawing.Point(12, 8);
             this.BSave.Name = "BSave";
-            this.BSave.Size = new System.Drawing.Size(300, 80);
-            this.BSave.TabIndex = 55;
+            this.BSave.Size = new System.Drawing.Size(300, 84);
+            this.BSave.TabIndex = 45;
             this.BSave.Text = "Guardar";
             this.BSave.UseVisualStyleBackColor = true;
             this.BSave.Click += new System.EventHandler(this.BSave_Click);
@@ -1014,7 +1016,7 @@
             this.BPictureID.Location = new System.Drawing.Point(90, 374);
             this.BPictureID.Name = "BPictureID";
             this.BPictureID.Size = new System.Drawing.Size(132, 74);
-            this.BPictureID.TabIndex = 56;
+            this.BPictureID.TabIndex = 40;
             this.BPictureID.Text = "Photo de Identificacion";
             this.BPictureID.UseVisualStyleBackColor = true;
             this.BPictureID.Click += new System.EventHandler(this.BPictureID_Click);
@@ -1025,6 +1027,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1257, 693);
             this.Controls.Add(this.BPictureID);
+            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.BSave);
             this.Controls.Add(this.PBPictureID);
             this.Controls.Add(this.PBApartmentImage);
